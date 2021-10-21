@@ -31,6 +31,8 @@ class Render_Controller extends CI_Controller
 	private   $plugin_scripts 	= array();
 	private   $plugin_styles 	= array();
 
+	protected $menu = '';
+
 
 	protected function preRender()
 	{
@@ -73,7 +75,8 @@ class Render_Controller extends CI_Controller
 			'title' 				=> $this->title,
 			'title_show' 			=> $this->title_show,
 			'content' 				=> $this->content,
-			'navigation_array'		=> $this->navigation
+			'navigation_array'		=> $this->navigation,
+			'menu' => $this->menu
 		);
 
 		$data = array_merge($data, $this->data);
@@ -117,30 +120,30 @@ class Render_Controller extends CI_Controller
 	{
 		// $navigation = '
 		// <ul class="nav nav-pills">
-  //           <li class="nav-item">
-  //               <a class="nav-link active" aria-current="page" href="index.html">
-  //                   <div class="avatar avatar-40 rounded icon"><i class="bi bi-house-door"></i></div>
-  //                   <div class="col">Dashboard</div>
-  //                   <div class="arrow"><i class="bi bi-arrow-right"></i></div>
-  //               </a>
-  //           </li>
+		//           <li class="nav-item">
+		//               <a class="nav-link active" aria-current="page" href="index.html">
+		//                   <div class="avatar avatar-40 rounded icon"><i class="bi bi-house-door"></i></div>
+		//                   <div class="col">Dashboard</div>
+		//                   <div class="arrow"><i class="bi bi-arrow-right"></i></div>
+		//               </a>
+		//           </li>
 
-  //           <li class="nav-item">
-  //               <a class="nav-link" href="chat.html" tabindex="-1" aria-disabled="true">
-  //                   <div class="avatar avatar-40 rounded icon"><i class="bi bi-chat-text"></i></div>
-  //                   <div class="col">Messages</div>
-  //                   <div class="arrow"><i class="bi bi-arrow-right"></i></div>
-  //               </a>
-  //           </li>
+		//           <li class="nav-item">
+		//               <a class="nav-link" href="chat.html" tabindex="-1" aria-disabled="true">
+		//                   <div class="avatar avatar-40 rounded icon"><i class="bi bi-chat-text"></i></div>
+		//                   <div class="col">Messages</div>
+		//                   <div class="arrow"><i class="bi bi-arrow-right"></i></div>
+		//               </a>
+		//           </li>
 
-            
-  //       </ul>';
+
+		//       </ul>';
 
 		$menu_header = '<ul class="nav nav-pills">';
 		$menu_body = '';
 		$menu_footer = '	</ul>';
 		$button_logout = '<li class="nav-item">
-				                <a class="nav-link" href="'.base_url().'login/logout" tabindex="-1" aria-disabled="true">
+				                <a class="nav-link" href="' . base_url() . 'login/logout" tabindex="-1" aria-disabled="true">
 				                    <div class="avatar avatar-40 rounded icon"><i class="bi bi-box-arrow-right"></i></div>
 				                    <div class="col">Logout</div>
 				                    <div class="arrow"><i class="bi bi-arrow-right"></i></div>
@@ -170,7 +173,8 @@ class Render_Controller extends CI_Controller
 		return $result;
 	}
 
-	private function footerHtml($navigation){
+	private function footerHtml($navigation)
+	{
 		// $main_menu = $this->navigationToArray($navigation);
 		// $menu_active = $menu['active'] ? ' active' : '';
 

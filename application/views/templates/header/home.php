@@ -24,6 +24,11 @@
   <!-- CSS Libraries -->
   <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap-icons.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/css/tiny-slider.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/css/baguetteBox.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/css/rangeslider.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/css/vanilla-dataTables.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/css/apexcharts.css">
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="<?= base_url() ?>assets/style.css">
   <!-- dynamic css -->
@@ -40,9 +45,9 @@
 
 <body class="bg-white">
   <!-- Preloader -->
-  <div id="preloader">
+  <!-- <div id="preloader">
     <div class="spinner-grow text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
-  </div>
+  </div> -->
 
 
   <!-- Toast-->
@@ -61,27 +66,41 @@
       <button class="btn btn-close btn-close-white position-relative p-1 ms-auto" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
   </div>
-
-
   <!-- Internet Connection Status -->
   <!-- # This code for showing internet connection status -->
   <div class="internet-connection-status" id="internetStatus"></div>
-  <div class="page-content-wrapper py-4 my-0">
+  <!-- Header Area -->
+  <div class="header-area py-1" style="height: auto;" id="headerArea">
     <div class="container">
-      <div class="d-flex justify-content-between align-items-center">
-        <a href="<?= base_url() ?>home">
-          <img src="<?= base_url() ?>assets/img/custom/login/logo.png" alt="" style="max-width: 150px;">
-        </a>
-        <div>
-          <span class="text-dark">Hallo, </span>
-          <a href="<?= base_url() ?>profile" class="text-primary fw-bold" id="header_profile_name"></a>
+      <!-- # Paste your Header Content from here -->
+      <!-- # Header Five Layout -->
+      <!-- # Copy the code from here ... -->
+      <!-- Header Content -->
+      <div class="header-content header-style-two position-relative d-flex align-items-center justify-content-between py-3">
+        <!-- Logo Wrapper -->
+        <div class="logo-wrapper"><a href="<?= base_url() ?>home"><img src="<?= base_url() ?>assets/img/custom/duahati_warna.png" alt="" style="max-height: 50px; margin-bottom: 5px;"></a></div>
+        <div class="navbar-content-wrapper d-flex align-items-center ps-5">
+          <!-- Search -->
+          <form action="#">
+            <div class="input-group">
+              <input class="form-control border-light" type="search" title="Apa Yang Anda Inginkan" placeholder="Apa Yang Anda Inginkan" aria-describedby="searchbox" style="height: 35px; font-size: .75em; padding-right: 1px;">
+              <button class="input-group-text bg-light border-light text-dark" style="height: 35px;" id="searchbox"><i class="bi bi-search" title="Apa Yang Anda Inginkan"></i></button>
+            </div>
+          </form>
         </div>
       </div>
+      <!-- # Header Five Layout End -->
     </div>
-    <!-- main page content -->
-    <?php if (file_exists(VIEWPATH . "templates/contents/{$content}.php")) : ?>
-      <?php $this->load->view("templates/contents/{$content}.php"); ?>
-    <?php endif; ?>
-    <!-- main page content ends -->
+  </div>
+  <!-- # Sidenav Left -->
+  <!-- Offcanvas -->
+  <div class="my-3 py-1 pb-4">
+  </div>
 
-    <?php $this->load->view('templates/footer'); ?>
+  <!-- main page content -->
+  <?php if (file_exists(VIEWPATH . "templates/contents/{$content}.php")) : ?>
+    <?php $this->load->view("templates/contents/{$content}.php"); ?>
+  <?php endif; ?>
+  <!-- main page content ends -->
+
+  <?php $this->load->view('templates/footer'); ?>

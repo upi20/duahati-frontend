@@ -1,8 +1,8 @@
 $(function () {
-  moment.defineLocale('id', {});
+  // moment.defineLocale('id', {});
   // base url api
 
-  page_render();
+  // page_render();
   function page_render() {
     $.ajax({
       method: 'get',
