@@ -1,61 +1,9 @@
 <!-- slider -->
 <div class="tiny-slider-one-wrapper">
-  <div class="tiny-slider-one">
-    <!-- Single Hero Slide -->
-    <div>
-      <div class="single-hero-slide bg-overlay" style="background-image: url('<?= base_url() ?>template/img/bg-img/31.jpg')">
-        <div class="h-100 d-flex align-items-center text-center">
-          <div class="container">
-            <h3 class="text-white mb-1">Title Slider Satu</h3>
-            <p class="text-white mb-4">Sub Title Slider Satu</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Single Hero Slide -->
-    <div>
-      <div class="single-hero-slide bg-overlay" style="background-image: url('<?= base_url() ?>template/img/bg-img/33.jpg')">
-        <div class="h-100 d-flex align-items-center text-center">
-          <div class="container">
-            <h3 class="text-white mb-1">Title Slider Dua</h3>
-            <p class="text-white mb-4">Sub Title SliderDua </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Single Hero Slide -->
-    <div>
-      <div class="single-hero-slide bg-overlay" style="background-image: url('<?= base_url() ?>template/img/bg-img/32.jpg')">
-        <div class="h-100 d-flex align-items-center text-center">
-          <div class="container">
-            <h3 class="text-white mb-1">Title Slider Tiga</h3>
-            <p class="text-white mb-4">Sub Title Slider Tiga</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Single Hero Slide -->
-    <div>
-      <div class="single-hero-slide bg-overlay" style="background-image: url('<?= base_url() ?>template/img/bg-img/33.jpg')">
-        <div class="h-100 d-flex align-items-center text-center">
-          <div class="container">
-            <h3 class="text-white mb-1">Title Slider Empat</h3>
-            <p class="text-white mb-4">Sub Title Slider Empat</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Single Hero Slide -->
-    <div>
-      <div class="single-hero-slide bg-overlay" style="background-image: url('<?= base_url() ?>template/img/bg-img/1.jpg')">
-        <div class="h-100 d-flex align-items-center text-center">
-          <div class="container">
-            <h3 class="text-white mb-1">Title Slider Lima</h3>
-            <p class="text-white mb-4">Sub Title Slider Lima</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="tiny-slider-one" id="container-slider">
+
+
+
   </div>
 </div>
 <div class="pt-3"></div>
@@ -107,16 +55,16 @@
     <div class="card-body ">
       <div class="d-flex align-items-center">
         <div class="user-profile me-3" style="overflow: hidden;">
-          <img style="margin: auto;
+          <img id="mentor_gambar" style="margin: auto;
               position: absolute;
               margin: auto;
               width: 100%;
               border-radius: 150px;
               -webkit-border-radius: 150px;
-              -moz-border-radius: 150px;" src="<?= base_url() ?>template/img/custom/home/mentor.jpg" alt="Mentor"></i>
+              -moz-border-radius: 150px;" onerror="this.src='<?= base_url() ?>assets/img/custom/2.jpg'" src="<?= base_url() ?>assets/img/custom/2.jpg" alt="Mentor"></i>
         </div>
         <div class="user-info">
-          <h5 class="mb-1">Raisa Andriana</h5>
+          <h5 class="mb-1" id="mentor_nama"></h5>
           <div class="d-flex align-items-center">
             <span>Mentor Dua hati</a>
           </div>
@@ -132,11 +80,11 @@
             <div class="accordion-body px-0 mb-0 pb-0">
               <div class="d-flex justify-content-between">
                 <h5 class="h6 text-dark">Periode Aktif</h5>
-                <p>1 Oktober - 1 Desember 2021</p>
+                <p id="mentor_periode_aktif"></p>
               </div>
               <p>Konsultasikan semua masalah anda secara personal.</p>
               <div class="d-flex flex-row-reverse">
-                <a href="" class="btn btn-sm btn-primary shadow-sm"><i class="bi bi-whatsapp"></i> Sapa Yuk</a>
+                <a id="mentor_no_whatsapp" href="" class="btn btn-sm btn-primary shadow-sm"><i class="bi bi-whatsapp"></i> Sapa Yuk</a>
               </div>
             </div>
           </div>

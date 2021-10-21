@@ -115,19 +115,19 @@ if (dropdownTarget.length > 0) {
 
 // 2.2.1 => Tiny Slider One (This code is dependent on [tiny-slider.js] plugin).
 
-if (document.querySelectorAll('.tiny-slider-one-wrapper').length > 0) {
-    var slider = tns({
-        container: ".tiny-slider-one",
-        items: 1,
-        slideBy: "page",
-        autoplay: true,
-        autoplayButtonOutput: false,
-        autoplayTimeout: 5000,
-        speed: 1000,
-        mouseDrag: true,
-        controlsText: [('<i class="bi bi-chevron-left"></i>'), ('<i class="bi bi-chevron-right"></i>')]
-    });
-}
+// if (document.querySelectorAll('.tiny-slider-one-wrapper').length > 0) {
+//     var slider = tns({
+//         container: ".tiny-slider-one",
+//         items: 1,
+//         slideBy: "page",
+//         autoplay: true,
+//         autoplayButtonOutput: false,
+//         autoplayTimeout: 5000,
+//         speed: 1000,
+//         mouseDrag: true,
+//         controlsText: [('<i class="bi bi-chevron-left"></i>'), ('<i class="bi bi-chevron-right"></i>')]
+//     });
+// }
 
 // 2.2.2 => Tiny Slider Two (This code is dependent on [tiny-slider.js] plugin).
 
@@ -626,22 +626,22 @@ var onlineBtn = document.querySelectorAll(".online-detection");
 if (offlineBtn.length > 0 && onlineBtn.length > 0) {
     var alertShowingId = document.getElementById("internetStatus");
 
-    offlineBtn[0].addEventListener("click", function(){
+    offlineBtn[0].addEventListener("click", function () {
         alertShowingId.style.display = "block";
         alertShowingId.style.backgroundColor = "#ea4c62";
         alertShowingId.innerText = "Oops! No internet connection.";
 
-        setTimeout(function() {
+        setTimeout(function () {
             alertShowingId.style.display = "none";
         }, 5000);
     });
 
-    onlineBtn[0].addEventListener("click", function(){
+    onlineBtn[0].addEventListener("click", function () {
         alertShowingId.style.display = "block";
         alertShowingId.style.backgroundColor = "#00b894";
         alertShowingId.innerText = "Your internet connection is back.";
 
-        setTimeout(function() {
+        setTimeout(function () {
             alertShowingId.style.display = "none";
         }, 5000);
     });
