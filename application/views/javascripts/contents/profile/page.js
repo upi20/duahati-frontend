@@ -22,7 +22,7 @@ $(function () {
       $("#header_profile_name").text(data.nama);
       localStorage.setItem('email', data.email);
       localStorage.setItem('nama', data.nama);
-      $("#img-profile").attr('src', `${api_base_url}../files/member/profiles/${data.foto}`);
+      $("#img-profile").attr('src', `${api_base_url}../files/member/${data.foto}`);
     }).fail(($xhr) => {
 
     })

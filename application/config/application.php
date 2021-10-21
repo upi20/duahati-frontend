@@ -53,4 +53,4 @@ $config['page_nav'] = 'main-header navbar navbar-expand navbar-white navbar-ligh
 
 $config['minify'] = false;
 
-$config['api_base_url'] = 'http://localhost:8080/aplikasi/berjalan/duahati/back/api/';
+$config['api_base_url'] = 'http://192.168.43.192:8080/aplikasi/berjalan/duahati/back/api/';
