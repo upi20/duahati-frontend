@@ -43,7 +43,7 @@
   <link rel="manifest" href="<?= base_url() ?>assets/manifest.json">
 </head>
 
-<body class="bg-white">
+<body class="bg-light" style="padding-top: 59px; min-height: 100vh;">
   <!-- Preloader -->
   <!-- <div id="preloader">
     <div class="spinner-grow text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
@@ -91,10 +91,6 @@
       </div>
       <!-- # Header Five Layout End -->
     </div>
-  </div>
-  <!-- # Sidenav Left -->
-  <!-- Offcanvas -->
-  <div class="my-3 py-1 pb-4">
   </div>
 
   <!-- main page content -->

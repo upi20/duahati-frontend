@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-2">
   <div class="card user-info-card mb-2">
     <div class="card-body d-flex align-items-center">
       <div class="user-profile me-3"><img id="img-profile" src="<?= base_url() ?>assets/img/custom/2.jpg" onerror="this.src='<?= base_url() ?>assets/img/custom/2.jpg'" style="
@@ -32,26 +32,26 @@
     </div>
     <div class="form-group">
       <label class="mb-2 mt-1 ms-2" for="nama">Nama Lengkap</label>
-      <input type="text" class="form-control" style="border-radius: 30px;" id="nama" name="nama" placeholder="Nama Lengkap" required />
+      <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap" required />
     </div>
     <div class="form-group">
       <label class="mb-2 mt-1 ms-2" for="email">Email</label>
-      <input type="email" class="form-control" style="border-radius: 30px;" id="email" name="email" placeholder="Email" required />
+      <input type="email" class="form-control" id="email" name="email" placeholder="Email" required />
     </div>
     <div class="form-group">
       <label class="mb-2 mt-1 ms-2" for="telepon">No Whatsapp</label>
-      <input type="text" class="form-control" style="border-radius: 30px;" id="telepon" name="telepon" placeholder="No Whatsapp" required />
+      <input type="text" class="form-control" id="telepon" name="telepon" placeholder="No Whatsapp" required />
     </div>
     <div class="form-group">
       <label class="mb-2 mt-1 ms-2" for="password">Password</label>
-      <input type="password" class="form-control" style="border-radius: 30px;" id="password" name="password" placeholder="Password" value="" autocomplete="off" />
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="" autocomplete="off" />
     </div>
     <div class="form-group">
       <label class="mb-2 mt-1 ms-2" for="password1">Ulangi password</label>
-      <input type="password" class="form-control" style="border-radius: 30px;" id="password1" name="password1" placeholder="Ulangi password" value="" autocomplete="off" />
+      <input type="password" class="form-control" id="password1" name="password1" placeholder="Ulangi password" value="" autocomplete="off" />
     </div>
-    <button class="btn btn-primary w-100 mb-3" type="submit" style="border-radius: 30px;">Simpan</button>
-    <button class="btn btn-danger w-100" type="button" data-bs-toggle="modal" data-bs-target="#logoutModal" style="border-radius: 30px;">Logout</button>
+    <button class="btn btn-primary w-100 mb-3" type="submit">Simpan</button>
+    <button class="btn btn-danger w-100" type="button" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</button>
   </form>
 </div>
 

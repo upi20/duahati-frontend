@@ -29,20 +29,20 @@
             <span>Home</span>
           </a>
         </li>
-        <li <?= $menu == 'bleajar' ? 'class="active"' : ''; ?>>
-          <a href="<?= base_url() ?>belajar/belajar">
+        <li <?= $menu == 'belajar' ? 'class="active"' : ''; ?>>
+          <a href="<?= base_url() ?>belajar">
             <i class="bi bi-play-btn" style="font-size: 1.5rem;"></i>
             <span>Belajar</span>
           </a>
         </li>
-        <li <?= $menu == 'mews' ? 'class="active"' : ''; ?>>
-          <a href="<?= base_url() ?>news/news">
+        <li <?= $menu == 'news' ? 'class="active"' : ''; ?>>
+          <a href="<?= base_url() ?>news">
             <i class="bi bi-newspaper" style="font-size: 1.5rem;"></i>
             <span>News</span>
           </a>
         </li>
         <li <?= $menu == 'refeal' ? 'class="active"' : ''; ?>>
-          <a href="<?= base_url() ?>refeal/refeal">
+          <a href="<?= base_url() ?>refeal">
             <i class="bi bi-people" style="font-size: 1.5rem;"></i>
             <span>Refeal</span>
           </a>

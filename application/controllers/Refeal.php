@@ -1,14 +1,15 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Profile extends Render_Controller
+class Refeal extends Render_Controller
 {
 
     public function index()
     {
         // Page Settings
-        $this->title = 'Profile';
-        $this->content = 'profile/page';
+        $this->title = 'Refeal';
+        $this->content = 'refeal/page';
+
         // Send data to view
         $this->render();
     }
@@ -16,7 +17,7 @@ class Profile extends Render_Controller
     function __construct()
     {
         parent::__construct();
-        $this->menu = 'profile';
+        $this->menu = 'refeal';
         $this->default_template = 'templates/header/home';
         $this->load->library('plugin');
         $this->load->helper('url');

@@ -1,3 +1,4 @@
+<!-- slider -->
 <div class="tiny-slider-one-wrapper">
   <div class="tiny-slider-one">
     <!-- Single Hero Slide -->
