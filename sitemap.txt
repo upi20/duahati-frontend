@@ -1,0 +1,12 @@
+*Sitemap:*
+  Login: [base_url]/login
+  Registrasi: [base_url]/registrasi
+  Home: [base_url]/home
+  Profile: [base_url]/profile
+  Kursi Berhadiah: [base_url]/kursiBerhadiah
+    detail: [base_url]/kursiBerhadiah/detail
+  Man of the match: [base_url]/mot
+  Tebak Skor: [base_url]/tebakSkor
+  LeardBoard: [base_url]/leardBoard
+  Result Quiz: [base_url]/result
+  Example Ads(iklan): [base_url]/ads

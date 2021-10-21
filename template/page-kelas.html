@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dua Hati">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#f1f2fb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <!-- Title -->
+  <title>Dua Hati</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+    rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="img/core-img/favicon.ico">
+  <link rel="apple-touch-icon" href="img/icons/icon-96x96.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/icons/icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-180x180.png">
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/tiny-slider.css">
+  <link rel="stylesheet" href="css/baguetteBox.min.css">
+  <link rel="stylesheet" href="css/rangeslider.css">
+  <link rel="stylesheet" href="css/vanilla-dataTables.min.css">
+  <link rel="stylesheet" href="css/apexcharts.css">
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner-grow text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+  </div>
+  <!-- Internet Connection Status -->
+  <!-- # This code for showing internet connection status -->
+  <div class="internet-connection-status" id="internetStatus"></div>
+  <!-- Header Area -->
+  <div class="header-area py-1" style="height: auto;" id="headerArea">
+    <div class="container">
+      <!-- # Paste your Header Content from here -->
+      <!-- # Header Five Layout -->
+      <!-- # Copy the code from here ... -->
+      <!-- Header Content -->
+      <div
+        class="header-content header-style-two position-relative d-flex align-items-center justify-content-between py-3">
+        <!-- Logo Wrapper -->
+        <div class="logo-wrapper"><a href="page-home.html"><img src="img/custom/duahati_warna.png" alt=""
+              style="max-height: 50px; margin-bottom: 5px;"></a></div>
+        <div class="navbar-content-wrapper d-flex align-items-center ps-5">
+          <!-- Search -->
+          <form action="#">
+            <div class="input-group">
+              <input class="form-control border-light" type="search" title="Apa Yang Anda Inginkan"
+                placeholder="Apa Yang Anda Inginkan" aria-describedby="searchbox"
+                style="height: 35px; font-size: .75em; padding-right: 1px;">
+              <button class="input-group-text bg-light border-light text-dark" style="height: 35px;" id="searchbox"><i
+                  class="bi bi-search" title="Apa Yang Anda Inginkan"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- # Header Five Layout End -->
+    </div>
+  </div>
+  <!-- # Sidenav Left -->
+  <!-- Offcanvas -->
+  <div class="offcanvas offcanvas-start" id="affanOffcanvas" data-bs-scroll="true" tabindex="-1"
+    aria-labelledby="affanOffcanvsLabel">
+    <button class="btn-close btn-close-white text-reset" type="button" data-bs-dismiss="offcanvas"
+      aria-label="Close"></button>
+    <div class="offcanvas-body p-0">
+      <!-- Side Nav Wrapper -->
+      <div class="sidenav-wrapper">
+        <!-- Sidenav Profile -->
+        <div class="sidenav-profile bg-gradient">
+          <div class="sidenav-style1"></div>
+          <!-- User Thumbnail -->
+          <div class="user-profile"><img src="img/bg-img/2.jpg" alt=""></div>
+          <!-- User Info -->
+          <div class="user-info">
+            <h6 class="user-name mb-0">Affan Islam</h6><span>CEO, Designing World</span>
+          </div>
+        </div>
+        <!-- Sidenav Nav -->
+        <ul class="sidenav-nav ps-0">
+          <li><a href="page-home.html"><i class="bi bi-house-door"></i>Home</a></li>
+          <li><a href="elements.html"><i class="bi bi-folder2-open"></i>Elements<span
+                class="badge bg-danger rounded-pill ms-2">220+</span></a></li>
+          <li><a href="pages.html"><i class="bi bi-collection"></i>Pages<span
+                class="badge bg-success rounded-pill ms-2">100+</span></a></li>
+          <li><a href="#"><i class="bi bi-cart-check"></i>Shop</a>
+            <ul>
+              <li><a href="page-shop-grid.html">Shop Grid</a></li>
+              <li><a href="page-shop-list.html">Shop List</a></li>
+              <li><a href="page-shop-details.html">Shop Details</a></li>
+              <li><a href="page-cart.html">Cart</a></li>
+              <li><a href="page-checkout.html">Checkout</a></li>
+            </ul>
+          </li>
+          <li><a href="settings.html"><i class="bi bi-gear"></i>Settings</a></li>
+          <li>
+            <div class="night-mode-nav"><i class="bi bi-moon"></i>Night Mode
+              <div class="form-check form-switch">
+                <input class="form-check-input form-check-success" id="darkSwitch" type="checkbox">
+              </div>
+            </div>
+          </li>
+          <li><a href="page-login.html"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
+        </ul>
+        <!-- Social Info -->
+        <div class="social-info-wrap"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i
+              class="bi bi-twitter"></i></a><a href="#"><i class="bi bi-linkedin"></i></a></div>
+        <!-- Copyright Info -->
+        <div class="copyright-info">
+          <p>2021 &copy; Made by<a href="#">Designing World</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-content-wrapper py-3">
+    <div class="container">
+      <!-- Kelas Information-->
+      <div class="card user-info-card mb-3">
+        <div class="card-body d-flex align-items-center">
+          <div class="user-profile me-3"><img src="img/bg-img/2.jpg" alt=""></i>
+          </div>
+          <div class="user-info">
+            <div class="d-flex align-items-center">
+              <h5 class="mb-1">Kelas Dasar</h5><span class="badge bg-warning ms-2 rounded-pill">Berbayar</span>
+            </div>
+            <div class="skill-data">
+              <!-- Skill Name -->
+              <div class="skill-name d-flex align-items-center justify-content-between">
+                <p class="mb-1">Progress</p><small class="mb-1"><span class="counter">78</span>%</small>
+              </div>
+              <!-- Progress -->
+              <div class="progress" style="height: 4px;">
+                <div class="progress-bar" style="width: 78%;" role="progressbar" aria-valuenow="78" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Kelas Detail-->
+      <h6 class="h6 pb-0 mt-2">Detail Kelas</h6>
+      <div class="card user-info-card mb-3">
+        <div class="card-body d-flex align-items-center">
+          <div class="user-info w-100">
+            <h6>Kelas dasar</h6>
+            <p>Kelas Dasar merupakan Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis itaque dolor
+              cupiditate</p>
+            <h6>Expired date:</h6>
+            <p>10 Desember 2021 (20 Hari Lagi)</p>
+            <h6>Hubungi Mentor:</h6>
+            <a href="https://api.whatsapp.com/send?phone=085798132505">Whatsapp</a>
+          </div>
+        </div>
+      </div>
+
+      <h6 class="h6 pb-0 mt-2">Materi Kelas</h6>
+      <!-- User Meta Data-->
+      <a class="affan-element-item" href="page-kelas-isi.html">Pengenalan<i class="text-success">Selesai</i></a>
+      <a class="affan-element-item" href="page-kelas-isi.html">Materi Pertama<i class="bi bi-chevron-right"></i></a>
+      <a class="affan-element-item" href="page-kelas-isi.html">Materi Kedua<i class="bi bi-chevron-right"></i></a>
+      <a class="affan-element-item" href="page-kelas-isi.html">Materi Ketiga<i class="bi bi-chevron-right"></i></a>
+    </div>
+  </div>
+  <!-- Footer Nav -->
+  <div class="footer-nav-area" id="footerNav">
+    <div class="container px-0">
+      <!-- =================================== -->
+      <!-- Paste your Footer Content from here -->
+      <!-- =================================== -->
+      <!-- Footer Content -->
+      <div class="footer-nav position-relative">
+        <ul class="h-100 d-flex align-items-center justify-content-between ps-0">
+          <li><a href="page-home.html">
+              <svg class="bi bi-collection" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                <path fill-rule="evenodd"
+                  d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+
+              </svg><span>Home</span></a></li>
+          <li class="active"><a href="page-list-kelas.html">
+              <svg class="bi bi-collection" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
+                <path
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+              </svg><span>Belajar</span></a></li>
+          <li><a href="page-news.html">
+              <svg class="bi bi-folder2-open" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z" />
+                <path
+                  d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z" />
+
+              </svg><span>News</span></a></li>
+          <li><a href="page-referal.html">
+              <svg class="bi bi-folder2-open" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
+              </svg><span>referal</span></a></li>
+          <li><a href="settings.html">
+              <svg class="bi bi-gear" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z">
+                </path>
+                <path fill-rule="evenodd"
+                  d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z">
+                </path>
+              </svg><span>Settings</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- All JavaScript Files -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slideToggle.min.js"></script>
+  <script src="js/internet-status.js"></script>
+  <script src="js/tiny-slider.js"></script>
+  <script src="js/baguetteBox.min.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/rangeslider.min.js"></script>
+  <script src="js/vanilla-dataTables.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/magic-grid.min.js"></script>
+  <script src="js/dark-rtl.js"></script>
+  <script src="js/active.js"></script>
+  <!-- PWA -->
+  <script src="js/pwa.js"></script>
+</body>
+
+</html>
