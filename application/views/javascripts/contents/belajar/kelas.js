@@ -46,19 +46,26 @@ $(function () {
       const ele = $('#container');
       ele.val('');
       let num = 1;
+      let current = 1;
       datas.data.forEach(e => {
-        ele.append(template(e, num));
+        ele.append(template(e, num, current));
+        current = e.selesai;
         num++;
       });
       console.log(datas);
     }).fail(($xhr) => {
     })
   }
-  function template(data, num) {
+  function template(data, num, current) {
     let selesai = '<i class="bi bi-chevron-right"></i>';
     if (data.selesai != 0) {
       selesai = '<i class="text-success">Selesai</i>';
     }
-    return `<a class="affan-element-item" href="<?= base_url() ?>belajar/detail/${data.id}">${num}. ${data.nama}${selesai}</a>`;
+
+    let ok = `class="affan-element-item" href="<?= base_url() ?>belajar/detail/${data.id}"`;
+    if (current != 1) {
+      ok = `class="affan-element-item" style="background-color: #fafafa;"`
+    }
+    return `<a ${ok} >${num}. ${data.nama}${selesai}</a>`;
   }
 });
