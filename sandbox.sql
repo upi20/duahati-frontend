@@ -1,0 +1,58 @@
+INSERT INTO `kelas_materi` (`id`, `kelas_id`, `nama`, `url`, `keterangan`, `created_by`, `updated_by`, `deleted_by`, `status`, `created_at`, `updated_at`, `deleted_at`)
+VALUES
+(NULL,
+'3',
+'Tujuan Mempelajari Ilmu Tajwid - Ustadz M. Ulin Nuha',
+'https://www.youtube.com/watch?v=ztfrZn7jBx4&list=PLUuYlj8dcEXbyJzGAUYTSCfYr5EqLo0dy&index=2',
+'',
+'1',
+NULL,
+NULL,
+'1',
+'2021-10-22 00:17:45',
+NULL,
+NULL),
+
+
+(NULL,
+'3',
+'Adab-Adab Membaca Al-Quran - Ustadz M. Ulin Nuha',
+'https://www.youtube.com/watch?v=KDt7qcbfb_g&list=PLUuYlj8dcEXbyJzGAUYTSCfYr5EqLo0dy&index=3',
+'',
+'1',
+NULL,
+NULL,
+'1',
+'2021-10-22 00:17:45',
+NULL,
+NULL),
+
+
+(NULL,
+'3',
+"Tingkatan Bacaan Al-Qur\'an",
+'https://www.youtube.com/watch?v=6H9T2QvxDCg&list=PLUuYlj8dcEXbyJzGAUYTSCfYr5EqLo0dy&index=4',
+'',
+'1',
+NULL,
+NULL,
+'1',
+'2021-10-22 00:17:45',
+NULL,
+NULL),
+
+
+(NULL,
+'3',
+"Bacaan Ta\'awudz Di Awal Surat - Ustadz M. Ulin Nuha - Serial Pelajaran Tahsin (05)",
+'https://www.youtube.com/watch?v=rKtGi3CrWZw&list=PLUuYlj8dcEXbyJzGAUYTSCfYr5EqLo0dy&index=5',
+'',
+'1',
+NULL,
+NULL,
+'1',
+'2021-10-22 00:17:45',
+NULL,
+NULL),
+
+

@@ -19,6 +19,7 @@ class Belajar extends Render_Controller
         // Page Settings
         $this->title = 'Belajar';
         $this->content = 'belajar/kelas';
+        $this->data['kelas_id'] = $id;
 
         // Send data to view
         $this->render();
