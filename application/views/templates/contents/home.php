@@ -14,34 +14,40 @@
     <div class="card-body">
       <div class="row g-3">
         <div class="col-4">
-          <div class="feature-card mx-auto text-center">
+          <a href="<?= base_url() ?>home" class="feature-card mx-auto text-center">
             <div class="card mx-auto bg-gray"><img src="<?= base_url() ?>template/img/custom/home/TUTORIAL.png" alt=""></div>
             <p class="mb-0">Tutorial</p>
-          </div>
+          </a>
         </div>
         <div class="col-4">
-          <div class="feature-card mx-auto text-center">
+          <a href="<?= base_url() ?>belajar" class="feature-card mx-auto text-center">
             <div class="card mx-auto bg-gray"><img src="<?= base_url() ?>template/img/custom/home/BELAJAR.png" alt=""></div>
             <p class="mb-0">Belajar</p>
-          </div>
+          </a>
         </div>
         <div class="col-4">
-          <div class="feature-card mx-auto text-center">
+          <a href="<?= base_url() ?>news" class="feature-card mx-auto text-center">
             <div class="card mx-auto bg-gray"><img src="<?= base_url() ?>template/img/custom/home/NEWS.png" alt=""></div>
             <p class="mb-0">News</p>
-          </div>
+          </a>
         </div>
         <div class="col-4">
-          <div class="feature-card mx-auto text-center">
+          <a href="<?= base_url() ?>refeal" class="feature-card mx-auto text-center">
             <div class="card mx-auto bg-gray"><img src="<?= base_url() ?>template/img/custom/home/REFERAL.png" alt=""></div>
             <p class="mb-0">Refeal</p>
-          </div>
+          </a>
         </div>
         <div class="col-4">
-          <div class="feature-card mx-auto text-center">
+          <a href="<?= base_url() ?>" class="feature-card mx-auto text-center">
             <div class="card mx-auto bg-gray"><img src="<?= base_url() ?>template/img/custom/home/VIP.png" alt=""></div>
             <p class="mb-0">VIP</p>
-          </div>
+          </a>
+        </div>
+        <div class="col-4">
+          <a href="<?= base_url() ?>profile" class="feature-card mx-auto text-center">
+            <div class="card mx-auto bg-gray"><img src="<?= base_url() ?>template/img/custom/home/pp.png" alt=""></div>
+            <p class="mb-0">Profile</p>
+          </a>
         </div>
       </div>
     </div>

@@ -14,13 +14,21 @@
   </div>
 </div>
 <br><br><br><br><br>
+
+<div style="width: 100%; position:fixed; bottom:16px; z-index:98; right:10px">
+  <div class="container">
+    <div class="d-flex justify-content-end align-items-center">
+      <a href="<?= base_url() ?>/home" class=" m-0 btn btn-primary shadow-lg fw-bold d-flex justify-content-end align-items-center" style="width: 50px;
+          border-radius: 50%;
+          height: 50px;">
+        <i class="bi bi-house w-100" style="font-size: 1.2rem;"></i>
+      </a>
+    </div>
+  </div>
+</div>
 <!-- Footer Nav -->
-<div class="footer-nav-area" id="footerNav">
+<!-- <div class="footer-nav-area" id="footerNav">
   <div class="container px-0">
-    <!-- =================================== -->
-    <!-- Paste your Footer Content from here -->
-    <!-- =================================== -->
-    <!-- Footer Content -->
     <div class="footer-nav position-relative">
       <ul class="h-100 d-flex align-items-center justify-content-between ps-0">
         <li <?= $menu == '' ? 'class="active"' : ''; ?>>
@@ -56,7 +64,7 @@
       </ul>
     </div>
   </div>
-</div>
+</div> -->
 <!-- All JavaScript Files -->
 <script src="<?= base_url() ?>assets/js/jquery-3.6.0.min.js"></script>
 <script src="<?= base_url() ?>assets/js/bootstrap.bundle.min.js"></script>

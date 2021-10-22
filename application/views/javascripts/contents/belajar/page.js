@@ -21,6 +21,10 @@ $(function () {
     })
   }
   function template(data) {
+    let is_taken = `<a class="btn btn-primary btn-sm" href="<?= base_url() ?>belajar/kelas/${data.id}">Kunjungi Kelas</a>`;
+    if (data.taken == 0) {
+      is_taken = `<a class="btn btn-info btn-sm" href="<?= base_url() ?>belajar/kelas/${data.id}">Registrasi</a>`;
+    }
     return `
     <div class="col-12 col-md-8 col-lg-7 col-xl-6">
       <div class="card shadow-sm blog-list-card">
@@ -29,7 +33,7 @@ $(function () {
           <div class="card-blog-content p-3">
             <a class="blog-title mb-3 text-dark" href="<?= base_url() ?>belajar/kelas">${data.nama}</a>
             <p>${data.keterangan}</p>
-            <a class="btn btn-primary btn-sm" href="<?= base_url() ?>belajar/kelas/${data.id}">Kunjungi Kelas</a>
+            ${is_taken}
           </div>
         </div>
       </div>`;
