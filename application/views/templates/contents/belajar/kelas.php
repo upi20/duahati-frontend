@@ -37,8 +37,8 @@
       <div class="user-info w-100">
         <h6 class="kelas_nama">Kelas dasar</h6>
         <p id="kelas_keterangan"></p>
-        <h6>Expired date:</h6>
-        <p id="kelas_expire"></p>
+        <!-- <h6>Expired date:</h6>
+        <p id="kelas_expire"></p> -->
         <h6>Hubungi Mentor:</h6>
         <a id="mentor_no_whatsapp" href="https://api.whatsapp.com/send?phone=085798132505">Whatsapp</a>
       </div>

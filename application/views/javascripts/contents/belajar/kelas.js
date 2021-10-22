@@ -27,7 +27,7 @@ $(function () {
 
 
       $("#kelas_keterangan").text(kelas.keterangan);
-      $("#kelas_expire").text('10 Desember 2021 (20 Hari Lagi)');
+      // $("#kelas_expire").text('10 Desember 2021 (20 Hari Lagi)');
       $('#mentor_no_whatsapp').attr('href', `https://api.whatsapp.com/send?phone=${mentor.no_whatsapp}`);
     }).fail(($xhr) => {
     })
