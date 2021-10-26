@@ -1,8 +1,8 @@
-Login
+Login [clear]
 Kelas
   List Kelas [clear]
-  Detail Kelas
-  Rating kosong bg transparant
+  Detail Kelas [clear]
+  Rating kosong bg transparant [clear]
   kelas kembali
 
-VIP
+VIP [clear]

@@ -22,20 +22,27 @@ $(document).ready(function () {
                 localStorage.setItem('email', data.data.email);
                 localStorage.setItem('nama', data.data.nama);
                 localStorage.setItem('level', data.data.level);
-                localStorage.setItem('foto', data.data.foto);
-                setToast('success', 'primary', 'Sukses', "Login Berhasil");
+                setToast({
+                    fill: "Login Berhasil",
+                    background: "bg-primary"
+                })
                 setTimeout(() => {
                     window.location = "<?= base_url() ?>home";
                 }, 300);
             },
             error: function ($xhr) {
-                setBtnLoading('#btn-submit', 'Submit', false);
                 if (!$xhr.responseText) {
-                    setToast('danger', 'danger', 'Failed', "Mohon periksa koneksi anda.");
+                    setToast({
+                        fill: "Mohon periksa koneksi anda.",
+                        background: "bg-danger"
+                    })
                     return;
                 }
                 const response = JSON.parse($xhr.responseText);
-                setToast('danger', 'danger', 'Failed', response.message);
+                setToast({
+                    fill: response.message,
+                    background: "bg-danger"
+                })
             },
             complete: function () {
                 setBtnLoading('#btn-submit', 'Submit', false);
@@ -53,4 +60,18 @@ function setBtnLoading(element, text, status = true) {
         el.removeAttr("disabled");
         el.html(text);
     }
+}
+
+toast_last_background = '';
+
+function setToast({
+    fill = '',
+    background = 'bg-primary'
+}) {
+    const toastId = '#liveToast';
+    $(toastId).removeClass(toast_last_background);
+    $(toastId).addClass(background);
+    $(toastId).html(fill);
+    toast_last_background = background;
+    (new bootstrap.Toast(document.querySelector('#liveToast')).show());
 }

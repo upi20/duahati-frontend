@@ -1,55 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
-    <meta charset="utf-8">
+    <title>Duahati</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dua Hati">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#f1f2fb">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <!-- Title -->
-    <title>Dua Hati</title>
-    <!-- Fonts -->
-    <?php if (ENVIRONMENT == 'production') : ?>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-    <?php endif; ?>
-    <!-- Favicon -->
-    <link rel="icon" href="<?= base_url() ?>assets/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="57x57" href="<?= base_url() ?>assets/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="<?= base_url() ?>assets/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="<?= base_url() ?>assets/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url() ?>assets/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="<?= base_url() ?>assets/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="<?= base_url() ?>assets/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="<?= base_url() ?>assets/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?= base_url() ?>assets/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url() ?>assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="<?= base_url() ?>assets/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url() ?>assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="<?= base_url() ?>assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="<?= base_url() ?>assets/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#fff">
-    <meta name="theme-color" content="#DB4664">
-    <meta name="msapplication-TileImage" content="<?= base_url() ?>assets/favicon/ms-icon-144x144.png">
-    <!-- CSS Libraries -->
-    <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/bootstrap.min.css">
+    <meta name="robots" content="noindex, follow">
+
+    <style>
+        .container-login100 {
+            width: 100%;
+            min-height: 100vh;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            z-index: 1
+        }
+
+        .container-login100::before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            /* background-color: rgba(0, 0, 0, .65) */
+        }
+
+        .container-login100-form-btn {
+            width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center
+        }
+
+        .wrap-login100 {
+            width: 390px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: 0 0
+        }
+
+        @media(max-width:992px) {
+            .alert-validate::before {
+                visibility: visible;
+                opacity: 1
+            }
+        }
+    </style>
+
+    <style>
+        .btn-danger {
+            background-color: #ED6868;
+        }
+
+        .btn-danger:focus {
+            background-color: #F97A7A;
+        }
+
+        .btn-danger:hover {
+            background-color: #F97A7A;
+        }
+
+        .btn-indigo {
+            background-color: #373459;
+            color: white;
+        }
+
+        .btn-indigo:focus {
+            background-color: #4C4592;
+            color: white;
+        }
+
+        .btn-indigo:hover {
+            background-color: #4C4592;
+            color: white;
+        }
+
+        .bg-two {
+            background-color: #DB4664;
+        }
+
+        <?php
+        for ($i = 0; $i <= 100; $i++) {
+            echo ".rounded-$i { border-radius: {$i}px; } ";
+        }
+
+        ?>
+    </style>
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap-icons.css">
-    <!-- Core Stylesheet -->
-    <link rel="stylesheet" href="<?= base_url() ?>assets/style.css">
-    <!-- Web App Manifest -->
-    <link rel="manifest" href="<?= base_url() ?>assets/manifest.json">
 </head>
 
-<body class="bg-white" style="min-height: 100vh;">
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="spinner-grow text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
-    </div>
+<body>
+
+
+
     <!-- Toast-->
     <div class="toast toast-autohide custom-toast-1 toast-danger home-page-toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="10000" data-bs-autohide="true" style="display: none;">
         <div class="toast-body">
@@ -66,28 +129,33 @@
             <button class="btn btn-close btn-close-white position-relative p-1 ms-auto" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
     </div>
-    <!-- Internet Connection Status -->
-    <!-- # This code for showing internet connection status -->
-    <div class="internet-connection-status" id="internetStatus"></div>
-    <!-- Back Button -->
-    <!-- Login Wrapper Area -->
+
+
+
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 9999">
+        <div id="liveToast" class="toast hide p-3 align-items-center text-white border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fw-bold" id="toast-body">
+
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
     <?php if (file_exists(VIEWPATH . "templates/contents/{$content}.php")) : ?>
         <?php $this->load->view("templates/contents/{$content}.php"); ?>
     <?php endif; ?>
-    <!-- All JavaScript Files -->
-
-
     <script src="<?= base_url() ?>assets/js/jquery-3.6.0.min.js"></script>
     <script src="<?= base_url() ?>assets/js/bootstrap.bundle.min.js"></script>
     <script src="<?= base_url() ?>assets/js/toast.js"></script>
-    <script src="<?= base_url() ?>assets/js/toast.js"></script>
+
     <script>
         const api_base_url = '<?= $this->config->item('api_base_url') ?>';
     </script>
     <?php if (file_exists(VIEWPATH . "javascripts/contents/{$content}.js")) : ?>
         <script src="<?= $this->plugin->build_url("javascripts/contents/{$content}.js") ?>" type="text/javascript"></script>
     <?php endif; ?>
-    <script src="<?= base_url() ?>assets/js/active.js"></script>
+
 </body>
 
 </html>
