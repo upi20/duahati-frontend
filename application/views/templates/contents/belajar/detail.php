@@ -11,16 +11,16 @@
   </div>
 </div>
 <div class="container">
-  <div class="card mt-2">
+  <div class="card mt-2 shadow-sm rounded-15">
     <div class="card-body p-3">
       <h5 class="h6">Deskripsi</h5>
       <p id="materi_deskripsi"></p>
     </div>
   </div>
-  <div class="card mt-2">
+  <div class="card mt-2 shadow-sm rounded-15">
     <div class="card-body p-3">
       <h6 class="h6">Konsutasi</h6>
-      Via: <a id="mentor_no_whatsapp" href="https://api.whatsapp.com/send?phone=085798132505">Whatsapp</a>
+      Via: <a id="mentor_no_whatsapp" href="https://api.whatsapp.com/send?phone=+6285798132505"><i class="bi bi-whatsapp"></i> Whatsapp</a>
       <hr>
       <label class="h6 text-dark" for="feedback">Feedback mentor</label>
       <form action="" id="ffeedback">
@@ -114,7 +114,7 @@
         <div class="form-group">
           <textarea class="form-control" id="keterangan_materi" name="keterangan_materi" cols="3" rows="5" placeholder="Feedback untuk materi ini."></textarea>
         </div>
-        <button class="btn btn-primary w-100" type="submit"><i class="bi bi-check2-square"></i> Tandai Selesai Dan Kirim Feedback</button>
+        <button class="btn btn-indigo w-100" type="submit"><i class="bi bi-check2-square"></i> Tandai Selesai Dan Kirim Feedback</button>
       </form>
     </div>
   </div>

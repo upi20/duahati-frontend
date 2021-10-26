@@ -1,6 +1,6 @@
 <div class="container mt-2">
   <!-- Kelas Information-->
-  <div class="card user-info-card mb-3">
+  <div class="card user-info-card mb-3 shadow-sm rounded-15">
     <div class="card-body d-flex align-items-center">
       <div class="user-profile me-3"><img id="kelas_foto" src="<?= base_url() ?>assets/img/custom/2.jpg" onerror="this.src='<?= base_url() ?>assets/img/custom/2.jpg'" alt="" style="
       margin: auto;
@@ -32,7 +32,7 @@
 
   <!-- Kelas Detail-->
   <h6 class="h6 pb-0 mt-2">Detail Kelas</h6>
-  <div class="card user-info-card mb-3">
+  <div class="card user-info-card mb-3 shadow-sm rounded-15">
     <div class="card-body d-flex align-items-center">
       <div class="user-info w-100">
         <h6 class="kelas_nama">Kelas dasar</h6>
@@ -40,14 +40,14 @@
         <!-- <h6>Expired date:</h6>
         <p id="kelas_expire"></p> -->
         <h6>Hubungi Mentor:</h6>
-        <a id="mentor_no_whatsapp" href="https://api.whatsapp.com/send?phone=085798132505">Whatsapp</a>
+        <a id="mentor_no_whatsapp" href="https://api.whatsapp.com/send?phone=+6285798132505"><i class="bi bi-whatsapp"></i> Whatsapp</a>
       </div>
     </div>
   </div>
 
   <h6 class="h6 pb-0 mt-2">Materi Kelas</h6>
   <!-- User Meta Data-->
-  <div id="container">
+  <div class="row g-3 justify-content-center" id="container">
 
   </div>
 </div>

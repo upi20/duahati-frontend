@@ -25,9 +25,9 @@
     </div>
   </div>
   <br>
-  <h6 class="mb-2">Update Profile</h6>
-  <div class="card">
-    <div class="card-body shadow-sm rounded-15">
+  <h6 class="mb-2 ms-2">Update Profile</h6>
+  <div class="card shadow-sm rounded-15">
+    <div class="card-body">
       <form action="" id="fmain">
         <div class="form-group">
           <label class="form-label" for="foto_profile">Foto Profile</label>
@@ -53,7 +53,7 @@
           <label class="mb-2 mt-1 ms-2" for="password1">Ulangi password</label>
           <input type="password" class="form-control" id="password1" name="password1" placeholder="Ulangi password" value="" autocomplete="off" />
         </div>
-        <button class="btn btn-primary w-100 mb-3" type="submit">Simpan</button>
+        <button class="btn btn-indigo w-100 mb-3" type="submit">Simpan</button>
         <button class="btn btn-danger w-100" type="button" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</button>
       </form>
     </div>

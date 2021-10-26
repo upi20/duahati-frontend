@@ -86,10 +86,12 @@ $nav_url = (object)[
 
     .btn-indigo:focus {
       background-color: #4C4592;
+      color: white;
     }
 
     .btn-indigo:hover {
       background-color: #4C4592;
+      color: white;
     }
 
     .bg-two {
@@ -161,7 +163,7 @@ $nav_url = (object)[
           <div class="user-profile"><img id="nav_foto" src="" alt=""></div>
           <!-- User Info -->
           <div class="user-info">
-            <h6 class="user-name mb-0" id="nav_nama">Affan Islam</h6>
+            <h6 class="user-name mb-0" id="nav_nama"></h6>
           </div>
         </div>
         <!-- Sidenav Nav -->

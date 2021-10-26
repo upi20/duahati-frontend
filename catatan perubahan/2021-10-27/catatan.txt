@@ -1,0 +1,8 @@
+Login
+Kelas
+  List Kelas [clear]
+  Detail Kelas
+  Rating kosong bg transparant
+  kelas kembali
+
+VIP

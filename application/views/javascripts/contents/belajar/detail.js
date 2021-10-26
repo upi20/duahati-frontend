@@ -77,7 +77,8 @@ $(function () {
       // $("#kelas_counter_nilai").text(data.total);
       let persentase = Number(data.selesai) * (100 / Number(data.total));
       persentase = Math.floor(persentase);
-
+      persentase = isNaN(persentase) ? 0 : persentase;
+      console.log( isNaN(persentase) );
       $("#kelas_counter_nilai").text(persentase);
       const progres = $('#kelas_counter_bar');
       progres.attr('style', `width: ${persentase}%`)
@@ -210,7 +211,7 @@ function setFill(name, nilai) {
     if (i <= nilai) {
       ele.find('.star-icon').attr('style', 'fill:#f1b10f');
     } else {
-      ele.find('.star-icon').attr('style', 'fill:#fff');
+      ele.find('.star-icon').attr('style', 'fill:rgba(0,0,0,0)');
     }
   }
   $(`[name=nilai_${name}]`).each(function (e) {
