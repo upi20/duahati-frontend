@@ -18,11 +18,24 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
     <?php endif; ?>
     <!-- Favicon -->
-    <link rel="icon" href="<?= base_url() ?>assets/img/core-img/favicon.ico">
-    <link rel="apple-touch-icon" href="<?= base_url() ?>assets/img/icons/icon-96x96.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="<?= base_url() ?>assets/img/icons/icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="<?= base_url() ?>assets/img/icons/icon-167x167.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url() ?>assets/img/icons/icon-180x180.png">
+    <link rel="icon" href="<?= base_url() ?>assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="<?= base_url() ?>assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="<?= base_url() ?>assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?= base_url() ?>assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url() ?>assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?= base_url() ?>assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?= base_url() ?>assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?= base_url() ?>assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?= base_url() ?>assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url() ?>assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="<?= base_url() ?>assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url() ?>assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?= base_url() ?>assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="<?= base_url() ?>assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="theme-color" content="#DB4664">
+    <meta name="msapplication-TileImage" content="<?= base_url() ?>assets/favicon/ms-icon-144x144.png">
     <!-- CSS Libraries -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap-icons.css">
@@ -32,7 +45,7 @@
     <link rel="manifest" href="<?= base_url() ?>assets/manifest.json">
 </head>
 
-<body>
+<body class="bg-white" style="min-height: 100vh;">
     <!-- Preloader -->
     <div id="preloader">
         <div class="spinner-grow text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
@@ -58,11 +71,9 @@
     <div class="internet-connection-status" id="internetStatus"></div>
     <!-- Back Button -->
     <!-- Login Wrapper Area -->
-    <div class="login-wrapper d-flex align-items-center justify-content-center">
-        <?php if (file_exists(VIEWPATH . "templates/contents/{$content}.php")) : ?>
-            <?php $this->load->view("templates/contents/{$content}.php"); ?>
-        <?php endif; ?>
-    </div>
+    <?php if (file_exists(VIEWPATH . "templates/contents/{$content}.php")) : ?>
+        <?php $this->load->view("templates/contents/{$content}.php"); ?>
+    <?php endif; ?>
     <!-- All JavaScript Files -->
 
 

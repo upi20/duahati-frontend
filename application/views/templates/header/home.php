@@ -1,3 +1,15 @@
+<?php
+$nav_url = (object)[
+  'home' => base_url('home'),
+  'tutorial' => base_url('tutorial'),
+  'belajar' => base_url('belajar'),
+  'news' => base_url('news'),
+  'referral' => base_url('referral'),
+  'vip' => base_url('vip'),
+  'profile' => base_url('profile'),
+];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="NOBAR TE BARENG">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme-color" content="#0134d4">
+  <meta name="theme-color" content="#DB4664">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -16,11 +28,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
   <!-- Favicon -->
-  <link rel="icon" href="<?= base_url() ?>assets/img/core-img/favicon.ico">
-  <link rel="apple-touch-icon" href="<?= base_url() ?>assets/img/icons/icon-96x96.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="<?= base_url() ?>assets/img/icons/icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="167x167" href="<?= base_url() ?>assets/img/icons/icon-167x167.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url() ?>assets/img/icons/icon-180x180.png">
+  <link rel="icon" href="<?= base_url() ?>assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="<?= base_url() ?>assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="<?= base_url() ?>assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="<?= base_url() ?>assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url() ?>assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="<?= base_url() ?>assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="<?= base_url() ?>assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="<?= base_url() ?>assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="<?= base_url() ?>assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url() ?>assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="<?= base_url() ?>assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url() ?>assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="<?= base_url() ?>assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="<?= base_url() ?>assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#fff">
+  <meta name="theme-color" content="#DB4664">
+  <meta name="msapplication-TileImage" content="<?= base_url() ?>assets/favicon/ms-icon-144x144.png">
   <!-- CSS Libraries -->
   <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap-icons.css">
@@ -41,6 +66,43 @@
   <?php endif; ?>
   <!-- Web App Manifest -->
   <link rel="manifest" href="<?= base_url() ?>assets/manifest.json">
+  <style>
+    .btn-danger {
+      background-color: #ED6868;
+    }
+
+    .btn-danger:focus {
+      background-color: #F97A7A;
+    }
+
+    .btn-danger:hover {
+      background-color: #F97A7A;
+    }
+
+    .btn-indigo {
+      background-color: #373459;
+      color: white;
+    }
+
+    .btn-indigo:focus {
+      background-color: #4C4592;
+    }
+
+    .btn-indigo:hover {
+      background-color: #4C4592;
+    }
+
+    .bg-two {
+      background-color: #DB4664;
+    }
+
+    <?php
+    for ($i = 0; $i <= 100; $i++) {
+      echo ".rounded-$i { border-radius: {$i}px; } ";
+    }
+
+    ?>
+  </style>
 </head>
 
 <body class="bg-light" style="padding-top: 59px; min-height: 100vh;">
@@ -70,32 +132,63 @@
   <!-- # This code for showing internet connection status -->
   <div class="internet-connection-status" id="internetStatus"></div>
   <!-- Header Area -->
-  <div class="header-area py-1" style="height: auto;" id="headerArea">
+  <div class="header-area" id="headerArea">
     <div class="container">
       <!-- # Paste your Header Content from here -->
       <!-- # Header Five Layout -->
       <!-- # Copy the code from here ... -->
       <!-- Header Content -->
-      <div class="header-content header-style-two position-relative d-flex align-items-center justify-content-between py-3">
+      <div class="header-content header-style-five position-relative d-flex align-items-center justify-content-between">
         <!-- Logo Wrapper -->
-        <div class="logo-wrapper"><a href="<?= base_url() ?>home"><img src="<?= base_url() ?>assets/img/custom/duahati_warna.png" alt="" style="max-height: 50px; margin-bottom: 5px;"></a></div>
-        <div class="navbar-content-wrapper d-flex align-items-center ps-5">
-          <!-- Search -->
-          <form action="#">
-            <div class="input-group">
-              <input class="form-control border-light" type="search" title="Apa Yang Anda Inginkan" placeholder="Apa Yang Anda Inginkan" aria-describedby="searchbox" style="height: 35px; font-size: .75em; padding-right: 1px;">
-              <button class="input-group-text bg-light border-light text-dark" style="height: 35px;" id="searchbox"><i class="bi bi-search" title="Apa Yang Anda Inginkan"></i></button>
-            </div>
-          </form>
-        </div>
+        <div class="logo-wrapper"><a href="<?= base_url() ?>home"><img src="<?= base_url() ?>assets/img/custom/duahati_warna.png" alt=""></a></div>
+        <!-- Navbar Toggler -->
+        <div class="navbar--toggler" id="affanNavbarToggler" data-bs-toggle="offcanvas" data-bs-target="#affanOffcanvas" aria-controls="affanOffcanvas"><span class="d-block"></span><span class="d-block"></span><span class="d-block"></span></div>
       </div>
       <!-- # Header Five Layout End -->
     </div>
   </div>
+  <!-- # Sidenav Left -->
+  <!-- Offcanvas -->
+  <div class="offcanvas offcanvas-start" id="affanOffcanvas" data-bs-scroll="true" tabindex="-1" aria-labelledby="affanOffcanvsLabel">
+    <button class="btn-close btn-close-white text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas-body p-0">
+      <!-- Side Nav Wrapper -->
+      <div class="sidenav-wrapper">
+        <!-- Sidenav Profile -->
+        <div class="sidenav-profile bg-two">
+          <div class="sidenav-style1"></div>
+          <!-- User Thumbnail -->
+          <div class="user-profile"><img id="nav_foto" src="" alt=""></div>
+          <!-- User Info -->
+          <div class="user-info">
+            <h6 class="user-name mb-0" id="nav_nama">Affan Islam</h6>
+          </div>
+        </div>
+        <!-- Sidenav Nav -->
+        <ul class="sidenav-nav ps-0">
+          <li><a href="<?= $nav_url->home ?>"><i class="bi bi-house-door"></i>Home</a></li>
+          <li><a href="<?= $nav_url->tutorial ?>"><i class="bi bi-lightbulb"></i>Tutorial</a></li>
+          <li><a href="<?= $nav_url->belajar ?>"><i class="bi bi-play-btn"></i>Belajar</a></li>
+          <li><a href="<?= $nav_url->news ?>"><i class="bi bi-newspaper"></i>News</a></li>
+          <li><a href="<?= $nav_url->referral ?>"><i class="bi bi-people"></i>Referral</a></li>
+          <li><a href="<?= $nav_url->vip ?>"><i class="bi" style="font-style: normal; font-size: .7rem; font-weight: bold;">VIP</i>VIP</a></li>
+          <li><a href="<?= $nav_url->profile ?>"><i class="bi bi-person"></i>Profile</a></li>
+          <li><a href="#" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
+        </ul>
+        <!-- Social Info -->
+        <div class="social-info-wrap"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-twitter"></i></a><a href="#"><i class="bi bi-linkedin"></i></a></div>
+        <!-- Copyright Info -->
+        <div class="copyright-info">
+          <p>2021 &copy; Infinit.id</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input type="hidden" id="nav_bar_render" value="1">
 
   <!-- main page content -->
   <?php if (file_exists(VIEWPATH . "templates/contents/{$content}.php")) : ?>
-    <?php $this->load->view("templates/contents/{$content}.php"); ?>
+    <?php $this->load->view("templates/contents/{$content}.php", ['nav_url' => $nav_url]); ?>
   <?php endif; ?>
   <!-- main page content ends -->
 

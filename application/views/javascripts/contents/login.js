@@ -1,6 +1,6 @@
 $(document).ready(function () {
     let value_key = localStorage.getItem('key')
-    // cekAuth()
+    cekAuth()
     function cekAuth() {
         if (value_key != null) {
             window.location = '<?= base_url() ?>home';
@@ -22,6 +22,7 @@ $(document).ready(function () {
                 localStorage.setItem('email', data.data.email);
                 localStorage.setItem('nama', data.data.nama);
                 localStorage.setItem('level', data.data.level);
+                localStorage.setItem('foto', data.data.foto);
                 setToast('success', 'primary', 'Sukses', "Login Berhasil");
                 setTimeout(() => {
                     window.location = "<?= base_url() ?>home";

@@ -5018,7 +5018,7 @@ form .btn.btn-sm {
 .form-control:focus {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
-  border-color: #cfe2ff;
+  border-color: black;
   color: #073984;
   background-color: #ffffff;
 }

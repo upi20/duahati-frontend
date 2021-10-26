@@ -1,4 +1,19 @@
 <!-- Modal -->
+<div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        Apakah anda yakin ..?
+      </div>
+      <div class="modal-footer py-2 d-flex justify-content-between">
+        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal" id="btn-logout">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
 <div class="modal fade bg-dark" id="adsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="adsModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
@@ -18,7 +33,7 @@
 <div style="width: 100%; position:fixed; bottom:16px; z-index:98; right:10px">
   <div class="container">
     <div class="d-flex justify-content-end align-items-center">
-      <a href="<?= base_url() ?>/home" class=" m-0 btn btn-primary shadow-lg fw-bold d-flex justify-content-end align-items-center" style="width: 50px;
+      <a href="<?= base_url() ?>/home" class=" m-0 btn btn-indigo shadow-lg fw-bold d-flex justify-content-end align-items-center" style="width: 50px;
           border-radius: 50%;
           height: 50px;">
         <i class="bi bi-house w-100" style="font-size: 1.2rem;"></i>
@@ -27,44 +42,6 @@
   </div>
 </div>
 <!-- Footer Nav -->
-<!-- <div class="footer-nav-area" id="footerNav">
-  <div class="container px-0">
-    <div class="footer-nav position-relative">
-      <ul class="h-100 d-flex align-items-center justify-content-between ps-0">
-        <li <?= $menu == '' ? 'class="active"' : ''; ?>>
-          <a href="<?= base_url() ?>home">
-            <i class="bi bi-house" style="font-size: 1.5rem;"></i>
-            <span>Home</span>
-          </a>
-        </li>
-        <li <?= $menu == 'belajar' ? 'class="active"' : ''; ?>>
-          <a href="<?= base_url() ?>belajar">
-            <i class="bi bi-play-btn" style="font-size: 1.5rem;"></i>
-            <span>Belajar</span>
-          </a>
-        </li>
-        <li <?= $menu == 'news' ? 'class="active"' : ''; ?>>
-          <a href="<?= base_url() ?>news">
-            <i class="bi bi-newspaper" style="font-size: 1.5rem;"></i>
-            <span>News</span>
-          </a>
-        </li>
-        <li <?= $menu == 'refeal' ? 'class="active"' : ''; ?>>
-          <a href="<?= base_url() ?>refeal">
-            <i class="bi bi-people" style="font-size: 1.5rem;"></i>
-            <span>Refeal</span>
-          </a>
-        </li>
-        <li <?= $menu == 'profile' ? 'class="active"' : ''; ?>>
-          <a href="<?= base_url() ?>profile">
-            <i class="bi bi-person" style="font-size: 1.5rem;"></i>
-            <span>Profile</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div> -->
 <!-- All JavaScript Files -->
 <script src="<?= base_url() ?>assets/js/jquery-3.6.0.min.js"></script>
 <script src="<?= base_url() ?>assets/js/bootstrap.bundle.min.js"></script>
@@ -99,6 +76,48 @@
       el.html(text);
     }
   }
+
+  // render nav
+  function page_render() {
+    $.ajax({
+      method: 'get',
+      url: api_base_url + 'member/home/list_slider',
+      data: {
+        key: value_key
+      }
+    }).done((datas) => {
+      const ele = $('#container-slider');
+      ele.val('');
+      datas.data.forEach(e => {
+        ele.append(template(e));
+      });
+      initial_slider();
+    }).fail(($xhr) => {})
+  }
+
+
+  if ($("#nav_bar_render").val() == 1) {
+    profile_info();
+  }
+
+  function profile_info() {
+    const nama = localStorage.getItem('nama');
+    const foto = localStorage.getItem('foto');
+    $("#nav_nama").text(nama);
+    $("#nav_foto").attr('src', `${api_base_url}../files/member/${foto}`);
+  }
+
+  $("#btn-logout").click(() => {
+    localStorage.removeItem('key');
+    localStorage.removeItem('id');
+    localStorage.removeItem('email');
+    localStorage.removeItem('nama');
+    localStorage.removeItem('level');
+    localStorage.removeItem('foto');
+    setTimeout(() => {
+      window.location = "<?= base_url() ?>login";
+    }, 200);
+  })
 </script>
 <script src="<?= base_url() ?>assets/js/toast.js"></script>
 <?php if (file_exists(VIEWPATH . "javascripts/contents/{$content}.js")) : ?>

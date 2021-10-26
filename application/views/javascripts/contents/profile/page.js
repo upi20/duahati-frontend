@@ -28,17 +28,6 @@ $(function () {
     })
   }
 
-  $("#btn-logout").click(() => {
-    localStorage.removeItem('key');
-    localStorage.removeItem('id');
-    localStorage.removeItem('email');
-    localStorage.removeItem('nama');
-    localStorage.removeItem('level');
-    setTimeout(() => {
-      window.location = "<?= base_url() ?>login";
-    }, 200);
-  })
-
   $("#fmain").submit(function (ev) {
     ev.preventDefault();
 
@@ -73,6 +62,7 @@ $(function () {
         $("#header_profile_name").text($('#nama').val());
         localStorage.setItem('nama', $('#nama').val());
         localStorage.setItem('email', $('#email').val());
+        localStorage.setItem('foto', data.data.foto);
         if (data.data.foto != null) {
           $("#img-profile").attr('src', `${api_base_url}../files/member/profiles/${data.data.foto}`);
         }

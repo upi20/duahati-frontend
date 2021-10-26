@@ -34,7 +34,7 @@ $(function () {
       $('#mentor_nama').text(data.nama);
       $('#mentor_gambar').attr('src', `${api_base_url}../files/mentor/${data.foto}`);
       $('#mentor_no_whatsapp').attr('href', `https://api.whatsapp.com/send?phone=${data.no_whatsapp}`);
-      // $('#mentor_periode_aktif').text('1 Oktober - 1 Desember 2021');
+      $('#mentor_periode_aktif').text('1 Oktober - 1 Desember 2021');
     }).fail(($xhr) => {
 
     })
