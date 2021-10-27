@@ -10,14 +10,14 @@
     </div>
     <div class="form-group mb-1">
       <button type="submit" class="btn btn-indigo w-100 fw-bold mb-3 text-white" style="width:100%; border-radius:30px" id="btn-submit">Masuk</button>
-      <a href="<?= base_url() ?>/registrasi" class="btn btn-danger w-100 fw-bold mb-3 text-white" style="width:100%; border-radius:30px" type="submit" id="btn-submit">Buat Akun Baru</a>
+      <a href="<?= base_url() ?>registrasi" class="btn btn-danger w-100 fw-bold mb-3 text-white" style="width:100%; border-radius:30px" type="submit" id="btn-submit">Buat Akun Baru</a>
     </div>
   </form>
   <div class="text-center mb-3 ">
     <div class="login-meta-data d-flex justify-content-evenly align-items-center">
       <!-- <p class="mt-3"><a class="stretched-link text-decoration-none" href="#"><i class="bi bi-check-circle"></i> Konfirmasi Pembayaran</a></p>
           <div class="m-0 p-0 stretched-link" style="font-size: 1.5rem;">|</div> -->
-      <a class="text-decoration-none" href="#"><i class="bi bi-play-circle"></i> Demo Kelas</a>
+      <a class="text-decoration-none fw-bold text-primary" href="#"><i class="bi bi-play-circle"></i> Demo Kelas</a>
     </div>
   </div>
 </div>

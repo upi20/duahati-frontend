@@ -11,6 +11,20 @@ class Registrasi extends Render_Controller
 		$this->render();
 	}
 
+	public function invoice()
+	{
+		$this->title = 'Detail Invoice';
+		$this->content = 'invoice';
+		$this->render();
+	}
+
+	public function konfirmasi()
+	{
+		$this->title = 'Konfirmasi Pembayaran';
+		$this->content = 'konfirmasi';
+		$this->render();
+	}
+
 	function __construct()
 	{
 		parent::__construct();

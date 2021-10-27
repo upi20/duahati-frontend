@@ -9,6 +9,15 @@ $(document).ready(function () {
   $('#fmain').submit(function (ev) {
     ev.preventDefault();
     // validasi
+    setToast({
+      fill: "Registrasi Berhasil",
+      background: "bg-primary"
+    })
+    setTimeout(() => {
+      window.location = "<?= base_url() ?>registrasi/invoice";
+    }, 500);
+
+    return;
     const password = $("#password");
     const password_repeat = $("#password_repeat");
 
