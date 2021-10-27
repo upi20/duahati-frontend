@@ -1,30 +1,13 @@
-<div class="container mt-2">
-  <div class="pt-3 d-block"></div>
-  <div class="blog-details-post-thumbnail position-relative">
-    <!-- Post Image --><img class="w-100 rounded-lg" src="<?= base_url() ?>assets/img/custom/2.jpg" alt="">
-    <!-- Post Bookmark --><a class="post-bookmark position-absolute card-badge" href="#"><i class="bi bi-bookmark"></i></a>
-  </div>
+<div class="container">
+  <div class="ratio ratio-16x9" id="materi_player"><iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="500px" type="text/html" allow="autoplay; fullscreen" src="https://www.youtube.com/embed/qF_HuLMI-B4?autoplay=1&amp;fs=1&amp;iv_load_policy=&amp;showinfo=1&amp;rel=0&amp;cc_load_policy=1&amp;start=0&amp;modestbranding&amp;end=0&amp;controls=1"></iframe></div>
 </div>
 <div class="container mt-2">
   <div class="blog-description p-3 bg-white rounded-15  shadow-sm">
-    <div class="container"><a class="badge bg-primary mb-2 d-inline-block" href="#">News</a>
-      <h3 class="mb-3">A collection of textile samples lay spread out on the table</h3>
-      <div class="d-flex align-items-center mb-4"><a class="badge-avater" href="#"><img class="img-circle" src="<?= base_url() ?>assets/img/custom/2.jpg" alt=""></a><span class="ms-2">Jarah Clark</span></div>
-      <p class="fz-14">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his
-        bed into a horrible vermin.</p>
-      <p class="fz-14">He lay on his armour-like back, and if he lifted his head a little he could see his brown
-        belly, slightly domed and divided by arches into stiff sections.</p>
-      <p class="fz-14">The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-      <p class="fz-14">His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly
-        as he looked. "What's happened to me? " he thought.</p>
-      <p class="fz-14">It wasn't a dream. His room, a proper human room although a little too small, lay peacefully
-        between its four familiar walls.</p>
-      <p class="fz-14">A collection of textile samples lay spread out on the table - Samsa was a travelling salesman -
-        and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a
-        nice, gilded frame.</p>
-      <p class="fz-14">It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur
-        muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at
-        the dull weather.</p>
+    <div class="container"><a class="badge bg-primary mb-2 d-inline-block" href="#">Tahsin</a>
+      <h3 class="mb-3">1. Kewajiban Belajar Tajwid - Ustadz Ulin Nuha</h3>
+      <div class="d-flex align-items-center mb-4"><a class="badge-avater" href="#"><img class="img-circle" src="<?= base_url() ?>assets/img/custom/2.jpg" alt=""></a><span class="ms-2">Nama narasumber</span></div>
+      <p class="fz-14">Keterangan</p>
+      <p class="fz-14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ratione.</p>
     </div>
   </div>
 </div>
