@@ -3,9 +3,9 @@
   <div class="row g-3 justify-content-center" id="container">
     <div class="col-sm-12 col-md-6">
       <div class="card shadow-sm rounded-15" style="width: 100%">
-        <img src="http://img.youtube.com/vi/qF_HuLMI-B4/mqdefault.jpg" class="card-img-top" alt="...">
+        <img src="http://img.youtube.com/vi/T3uVsEg8enQ/mqdefault.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <a href="<?= base_url() ?>tutorial/detail/1" class="card-title h5 text-decoration-none text-dark">1. Kewajiban Belajar Tajwid - Ustadz Ulin Nuha</a>
+          <a href="<?= base_url() ?>tutorial/detail/1" class="card-title h5 text-decoration-none text-dark">Materi 1 " Cara merawat diri sebelum menikah" #2 KEBUGARAN</a>
           <p class="card-text">Keterangan video
           </p>
           <div class="d-flex justify-content-between flex-row-reverse  align-items-center">
