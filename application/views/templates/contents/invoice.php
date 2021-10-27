@@ -1,5 +1,17 @@
 <div class="wrap-login100 p-t-30 p-b-50 card px-3 mx-4 py-4" style="background-color: rgba(255, 255, 255, 0); border-radius: 30px; border: 0;">
-  <h3 class="h5 text-center mb-3 mt-1">Detail Inovice</h3>
+  <h3 class="h4 text-center mb-3 mt-1">Detail Inovice</h3>
+
+  <div class="shadow-sm rounded-15 p-3 bg-white mb-2">
+    <div class="d-flex justify-content-between align-items-center ">
+      <span>No. Invoice</span>
+      <span class="fw-bold">REG202110270001</span>
+    </div>
+    <div class="d-flex justify-content-between align-items-center ">
+      <span>Nominal Pembayaran</span>
+      <span class="text-success fw-bold">IDR. 80.000</span>
+    </div>
+  </div>
+
   <div class="shadow-sm rounded-15 p-3 bg-white mb-2">
     <div class="d-flex justify-content-between align-items-center ">
       <span>Nama</span>
@@ -19,15 +31,10 @@
     <p>Pembayaran Registrasi Member Baru</p>
   </div>
 
-  <div class="shadow-sm rounded-15 p-3 bg-white mb-2">
-    <div class="d-flex justify-content-between align-items-center ">
-      <span>Total Pembayaran</span>
-      <span class="text-success fw-bold">IDR. 80.000</span>
-    </div>
-  </div>
-
   <div class="shadow-sm rounded-15 p-3 bg-white">
-    <span>Pembayaran Transfer:</span>
+    <div class="w-100 text-center">
+      <h5>Pembayaran Transfer:</h5>
+    </div>
     <h6 class="my-0 py-0">Bank Negara Indonesia</h6>
     <span>Nomor Rekening:</span>
     <div class="d-flex justify-content-between align-items-center">
