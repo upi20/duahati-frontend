@@ -2,7 +2,10 @@
   <!-- Kelas Information-->
   <div class="card user-info-card mb-3 shadow-sm rounded-15">
     <div class="card-body d-flex align-items-center">
-      <div class="user-profile me-3"><img id="kelas_foto" src="<?= base_url() ?>assets/img/custom/2.jpg" onerror="this.src='<?= base_url() ?>assets/img/custom/2.jpg'" alt="" style="
+      <div class="user-profile me-3" style="              max-width: 80px;
+              max-height: 80px;
+              min-width: 80px;
+              min-height: 80px;"><img id="kelas_foto" src="<?= base_url() ?>assets/img/custom/2.jpg" onerror="this.src='<?= base_url() ?>assets/img/custom/2.jpg'" alt="" style="
       margin: auto;
               position: absolute;
               margin: auto;
