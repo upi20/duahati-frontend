@@ -142,9 +142,13 @@
             </div>
         </div>
     </div>
-    <?php if (file_exists(VIEWPATH . "templates/contents/{$content}.php")) : ?>
-        <?php $this->load->view("templates/contents/{$content}.php"); ?>
-    <?php endif; ?>
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('<?= base_url() ?>assets/img/custom/bg.jpg');">
+            <?php if (file_exists(VIEWPATH . "templates/contents/{$content}.php")) : ?>
+                <?php $this->load->view("templates/contents/{$content}.php"); ?>
+            <?php endif; ?>
+        </div>
+    </div>
     <script src="<?= base_url() ?>assets/js/jquery-3.6.0.min.js"></script>
     <script src="<?= base_url() ?>assets/js/bootstrap.bundle.min.js"></script>
     <script src="<?= base_url() ?>assets/js/toast.js"></script>
