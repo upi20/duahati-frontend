@@ -6,8 +6,13 @@ class Login extends Render_Controller
 
 	public function index()
 	{
-
 		$this->content = 'login';
+		$this->render();
+	}
+
+	public function demo()
+	{
+		$this->content = 'demo';
 		$this->render();
 	}
 

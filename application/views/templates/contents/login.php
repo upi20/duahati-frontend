@@ -17,7 +17,7 @@
     <div class="login-meta-data d-flex justify-content-evenly align-items-center">
       <!-- <p class="mt-3"><a class="stretched-link text-decoration-none" href="#"><i class="bi bi-check-circle"></i> Konfirmasi Pembayaran</a></p>
           <div class="m-0 p-0 stretched-link" style="font-size: 1.5rem;">|</div> -->
-      <a class="text-decoration-none fw-bold text-primary" href="#"><i class="bi bi-play-circle"></i> Demo Kelas</a>
+      <a class="text-decoration-none fw-bold text-primary" href="<?= base_url() ?>login/demo"><i class="bi bi-play-circle"></i> Demo Kelas</a>
     </div>
   </div>
 </div>
