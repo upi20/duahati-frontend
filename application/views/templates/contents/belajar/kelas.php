@@ -6,8 +6,10 @@
       margin: auto;
               position: absolute;
               margin: auto;
-              width: 80px;
-              height: 80px;
+              max-width: 80px;
+              max-height: 80px;
+              min-width: 80px;
+              min-height: 80px;
               border-radius: 150px;
               object-fit: cover; /* cover, contain, fill, scale-down */
               object-position: center;"></i>
