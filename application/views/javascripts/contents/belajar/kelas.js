@@ -66,7 +66,7 @@ $(function () {
       selesai = '<i class="text-success">Selesai</i>';
     }
 
-    let ok = `href="<?= base_url() ?>belajar/detail/${data.id}"`;
+    let ok = `href="<?= base_url() ?>belajar/detail/${data.id}/${data.kelas_id}"`;
     let link = ok;
     if (current != 1) {
       ok = `class="btn btn-secondary"`

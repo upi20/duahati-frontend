@@ -1,3 +1,6 @@
+<div class="container">
+  <a href="<?= base_url() ?>belajar/kelas/<?= $kelas_id ?>" class="" type="submit"><i class="bi bi-chevron-left"></i> Kembali Ke Kelas</a>
+</div>
 <div class="container mt-2">
   <!-- Element Heading -->
   <div class="element-heading">
@@ -5,8 +8,7 @@
   </div>
 </div>
 <div class="container">
-  <!-- 16:9 Aspect Ratio -->
-  <div class="ratio ratio-16x9 mb-4" id="materi_player">
+  <div class="ratio ratio-16x9" id="materi_player">
 
   </div>
 </div>

@@ -1,8 +1,11 @@
 Login [clear]
-Kelas
+Kelas // belum daftar kelas
   List Kelas [clear]
   Detail Kelas [clear]
   Rating kosong bg transparant [clear]
-  kelas kembali
+  kelas kembali [clear]
 
 VIP [clear]
+
+
+Registrasi
