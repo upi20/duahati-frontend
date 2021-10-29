@@ -95,7 +95,7 @@
   <div class="element-heading mt-3">
     <div class="d-flex justify-content-between align-items-between">
       <h6>Top News</h6>
-      <a href="">View All </a>
+      <a href="<?= base_url() ?>news">View All </a>
     </div>
   </div>
 </div>
@@ -103,43 +103,8 @@
 <!-- Tiny Slider Three Wrapper -->
 <div class="container px-0">
   <div class="tiny-slider-three-wrapper">
-    <div class="tiny-slider-three">
-      <!-- item -->
-      <div>
-        <div class="single-hero-slide bg-img" style="background-image: url('<?= base_url() ?>template/img/bg-img/35.jpg')">
-          <div class="slide-content">
-            <h2>Berita Pertama</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, sequi?</p>
-            <div class="d-flex justify-content-end align-items-center">
-              <a class="btn btn-creative btn-indigo rounded-15" href="#">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- item -->
-      <div>
-        <div class="single-hero-slide bg-img" style="background-image: url('<?= base_url() ?>template/img/bg-img/35.jpg')">
-          <div class="slide-content">
-            <h2>Berita Kdeua</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, sequi?</p>
-            <div class="d-flex justify-content-end align-items-center">
-              <a class="btn btn-creative btn-indigo rounded-15" href="#">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- item -->
-      <div>
-        <div class="single-hero-slide bg-img" style="background-image: url('<?= base_url() ?>template/img/bg-img/35.jpg')">
-          <div class="slide-content">
-            <h2>Berita Ketiga</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, sequi?</p>
-            <div class="d-flex justify-content-end align-items-center">
-              <a class="btn btn-creative btn-indigo rounded-15" href="#">Read More</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="tiny-slider-three" id="news_con">
+
     </div>
   </div>
 </div>

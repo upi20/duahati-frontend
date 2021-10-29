@@ -1,35 +1,20 @@
 <div class="container mt-2">
   <div class="pt-3 d-block"></div>
   <div class="blog-details-post-thumbnail position-relative">
-    <!-- Post Image --><img class="w-100 rounded-lg" src="<?= base_url() ?>assets/img/custom/2.jpg" alt="">
-    <!-- Post Bookmark --><a class="post-bookmark position-absolute card-badge" href="#"><i class="bi bi-bookmark"></i></a>
+    <!-- Post Image --><img class="w-100 rounded-lg" id="foto" src="<?= base_url() ?>assets/img/custom/2.jpg" alt="">
   </div>
 </div>
 <div class="container mt-2">
   <div class="blog-description p-3 bg-white rounded-15  shadow-sm">
-    <div class="container"><a class="badge bg-primary mb-2 d-inline-block" href="#">News</a>
-      <h3 class="mb-3">A collection of textile samples lay spread out on the table</h3>
-      <div class="d-flex align-items-center mb-4"><a class="badge-avater" href="#"><img class="img-circle" src="<?= base_url() ?>assets/img/custom/2.jpg" alt=""></a><span class="ms-2">Jarah Clark</span></div>
-      <p class="fz-14">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his
-        bed into a horrible vermin.</p>
-      <p class="fz-14">He lay on his armour-like back, and if he lifted his head a little he could see his brown
-        belly, slightly domed and divided by arches into stiff sections.</p>
-      <p class="fz-14">The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-      <p class="fz-14">His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly
-        as he looked. "What's happened to me? " he thought.</p>
-      <p class="fz-14">It wasn't a dream. His room, a proper human room although a little too small, lay peacefully
-        between its four familiar walls.</p>
-      <p class="fz-14">A collection of textile samples lay spread out on the table - Samsa was a travelling salesman -
-        and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a
-        nice, gilded frame.</p>
-      <p class="fz-14">It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur
-        muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at
-        the dull weather.</p>
+    <h4 id="title"></h4>
+    <div class="container" id="deskripsi">
+
     </div>
   </div>
 </div>
+
 <!-- All Comments -->
-<div class="rating-and-review-wrapper pb-3 mt-3">
+<div class="rating-and-review-wrapper pb-3 mt-3" style="display: none;">
   <div class="container">
     <div class="bg-white rounded-15 shadow-sm p-3">
       <h6 class="mb-3">All comments</h6>
@@ -64,7 +49,7 @@
 </div>
 
 <!-- Comment Form -->
-<div class="ratings-submit-form pb-3">
+<div class="ratings-submit-form pb-3" style="display: none;">
   <div class="container">
     <div class="bg-white rounded-15 shadow-sm p-3">
       <h6 class="mb-3">Submit a comment</h6>
@@ -77,3 +62,7 @@
     </div>
   </div>
 </div>
+
+<script>
+  const news_id = '<?= $news_id ?>';
+</script>

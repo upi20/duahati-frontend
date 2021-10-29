@@ -19,7 +19,7 @@ class News extends Render_Controller
         // Page Settings
         $this->title = 'News Detail';
         $this->content = 'news/detail';
-
+        $this->data['news_id'] = $id;
         // Send data to view
         $this->render();
     }

@@ -2,8 +2,26 @@ $(function () {
   // moment.defineLocale('id', {});
   // base url api
 
+  page_render_news();
   page_render();
   profile_render();
+  function page_render_news() {
+    $.ajax({
+      method: 'get',
+      url: api_base_url + 'member/home/list_berita',
+      data: {
+        key: value_key
+      }
+    }).done((datas) => {
+      const ele = $('#news_con');
+      ele.val('');
+      datas.data.forEach(e => {
+        ele.append(template_news(e));
+      });
+      initial_slider_news();
+    }).fail(($xhr) => {
+    })
+  }
   function page_render() {
     $.ajax({
       method: 'get',
@@ -40,13 +58,27 @@ $(function () {
     })
   }
 
+  function template_news(data) {
+    return `
+    <div>
+      <div class="single-hero-slide bg-img" style="background-image: url('${api_base_url}../files/news/master/${data.foto}'); opacity:1; max-height:200px">
+        <div class="slide-content">
+          <h2 class="text-white">${data.judul}</h2>
+          <div class="d-flex justify-content-end align-items-center">
+            <a class="btn btn-creative btn-indigo rounded-15" href="<?= base_url()?>news/detail/${data.id}">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    `;
+  }
   function template(data) {
     return `
       <div>
         <div class="single-hero-slide bg-overlay" style="background-image: url('${api_base_url}../files/home/slider/${data.foto}')">
           <div class="h-100 d-flex align-items-center text-center">
             <div class="container">
-              <h3 class="text-white mb-1">${data.nama}</h3>
+              <h6 class="text-white mb-1 fw-bold">${data.nama}</h6>
               <p class="text-white mb-4">${data.keterangan}</p>
             </div>
           </div>
@@ -67,6 +99,26 @@ $(function () {
         speed: 1000,
         mouseDrag: true,
         controlsText: [('<i class="bi bi-chevron-left"></i>'), ('<i class="bi bi-chevron-right"></i>')]
+      });
+    }
+  }
+
+  function initial_slider_news() {
+    if (document.querySelectorAll('.tiny-slider-three-wrapper').length > 0) {
+      var tinySliderThree = tns({
+        container: '.tiny-slider-three',
+        items: 1,
+        gutter: 10,
+        center: true,
+        slideBy: 'page',
+        autoplay: true,
+        autoplayButtonOutput: false,
+        autoplayTimeout: 5000,
+        speed: 1000,
+        mouseDrag: true,
+        controls: false,
+        nav: false,
+        edgePadding: 40
       });
     }
   }
