@@ -15,11 +15,16 @@ class Registrasi extends Render_Controller
 	{
 		$this->title = 'Detail Invoice';
 		$this->content = 'invoice';
+		$this->data['token'] = $this->input->get('token');
+		$this->data['email'] = $this->input->get('email');
+		$this->data['nama'] = $this->input->get('nama');
+		$this->data['telepon'] = $this->input->get('telepon');
 		$this->render();
 	}
 
 	public function konfirmasi()
 	{
+		$this->data['token'] = $this->input->get('token');
 		$this->title = 'Konfirmasi Pembayaran';
 		$this->content = 'konfirmasi';
 		$this->render();

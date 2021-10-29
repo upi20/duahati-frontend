@@ -22,6 +22,7 @@ $(document).ready(function () {
                 localStorage.setItem('email', data.data.email);
                 localStorage.setItem('nama', data.data.nama);
                 localStorage.setItem('level', data.data.level);
+                localStorage.setItem('foto', data.data.foto);
                 setToast({
                     fill: "Login Berhasil",
                     background: "bg-primary"

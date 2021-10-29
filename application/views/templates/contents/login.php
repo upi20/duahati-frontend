@@ -1,6 +1,15 @@
 <div class="wrap-login100 p-t-30 p-b-50 card px-3 mx-4 py-4 shadow-lg" style="background-color: rgba(255, 255, 255, .7); border-radius: 30px;">
   <img src="<?= base_url() ?>assets/img/custom/duahati_warna.png" alt="" class="px-5 mb-3">
-
+  <?php if ($alert_konfirmasi == 1) : ?>
+    <div id="alert_con">
+      <div id="alert_sub_con" class="alert alert-success alert-dismissible fade show" role="alert" style="border-radius: 15px;">
+        <span id="alert_fill" class="font-weight-bold">Success</span>. Pembayaran anda sedang di proses administrator.
+        <button type="button" class="close btn" data-dismiss="alert" onclick="$('#alert_con').fadeOut()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  <?php endif; ?>
   <form action="" method="post" id="flogin">
     <div class="form-group mb-3">
       <input type="email" class="form-control p-2 ps-3" placeholder="Masukan Email" name="email" id="email" style="border-radius:30px; background-color: rgba(255, 255, 255, .75);">

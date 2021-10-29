@@ -9,15 +9,6 @@ $(document).ready(function () {
   $('#fmain').submit(function (ev) {
     ev.preventDefault();
     // validasi
-    setToast({
-      fill: "Registrasi Berhasil",
-      background: "bg-primary"
-    })
-    setTimeout(() => {
-      window.location = "<?= base_url() ?>registrasi/invoice";
-    }, 500);
-
-    return;
     const password = $("#password");
     const password_repeat = $("#password_repeat");
 
@@ -39,6 +30,10 @@ $(document).ready(function () {
       return
     }
 
+    const email = $("#email").val();
+    const nama = $("#nama").val();
+    const telepon = $("#telepon").val();
+
 
     setBtnLoading('#btn-submit', 'Submit')
     $.ajax({
@@ -54,7 +49,7 @@ $(document).ready(function () {
           background: "bg-primary"
         })
         setTimeout(() => {
-          window.location = "<?= base_url() ?>login";
+          window.location = `<?= base_url() ?>registrasi/invoice?token=${data.data.token}&email=${email}&nama=${nama}&telepon=${encodeURIComponent(telepon)}`;
         }, 500);
       },
       error: function ($xhr) {

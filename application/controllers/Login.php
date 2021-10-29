@@ -7,6 +7,7 @@ class Login extends Render_Controller
 	public function index()
 	{
 		$this->content = 'login';
+		$this->data['alert_konfirmasi'] = $this->input->get('konfirmasi');
 		$this->render();
 	}
 
