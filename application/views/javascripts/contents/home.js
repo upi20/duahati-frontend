@@ -61,29 +61,31 @@ $(function () {
   function template_news(data) {
     return `
     <div>
-      <div class="single-hero-slide bg-img" style="background-image: url('${api_base_url}../files/news/master/${data.foto}'); opacity:1; max-height:200px">
+      <div class="single-hero-slide bg-img" style="background-image: url('${api_base_url}../files/news/master/${data.foto}'); opacity:1; height:200px">
         <div class="slide-content">
-          <h2 class="text-white">${data.judul}</h2>
-          <div class="d-flex justify-content-end align-items-center">
-            <a class="btn btn-creative btn-indigo rounded-15" href="<?= base_url()?>news/detail/${data.id}">Read More</a>
+          <div class="bg-light p-2"style="border-radius:8px; opacity: 0.9;">
+            <h6 class="text-dark">${String(data.judul).substring(0, 75) + (String(data.judul).length > 75 ? '...' : '')}</h6 >
+          </div >
+          <div style="position: absolute; bottom:30px;">
+          <a class="btn btn-creative btn-indigo rounded-15" href="<?= base_url()?>news/detail/${data.id}">Read More</a>
           </div>
-        </div>
-      </div>
-    </div>
+        </div >
+      </div >
+    </div >
     `;
   }
   function template(data) {
     return `
-      <div>
-        <div class="single-hero-slide bg-overlay" style="background-image: url('${api_base_url}../files/home/slider/${data.foto}')">
-          <div class="h-100 d-flex align-items-center text-center">
-            <div class="container">
-              <h6 class="text-white mb-1 fw-bold">${data.nama}</h6>
-              <p class="text-white mb-4">${data.keterangan}</p>
-            </div>
-          </div>
+    < div >
+    <div class="single-hero-slide bg-overlay" style="background-image: url('${api_base_url}../files/home/slider/${data.foto}')">
+      <div class="h-100 d-flex align-items-center text-center">
+        <div class="container">
+          <h6 class="text-white mb-1 fw-bold">${data.nama}</h6>
+          <p class="text-white mb-4">${data.keterangan}</p>
         </div>
       </div>
+    </div>
+      </div >
     `;
   }
 
