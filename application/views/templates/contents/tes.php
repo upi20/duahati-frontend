@@ -6,7 +6,7 @@
 </div>
 <div class="container">
   <div class="ratio ratio-16x9" id="materi_player">
-    <video controls>
+    <video controls allowfullscreen>
       <source src="https://mobile.duahati.id/tes.mp4" type="video/mp4">
     </video>
   </div>
