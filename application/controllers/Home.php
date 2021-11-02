@@ -14,6 +14,16 @@ class Home extends Render_Controller
         $this->render();
     }
 
+    function tes()
+    {
+        // Page Settings
+        $this->title = 'tes';
+        $this->content = 'tes';
+
+        // Send data to view
+        $this->render();
+    }
+
     function __construct()
     {
         parent::__construct();

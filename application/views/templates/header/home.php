@@ -175,6 +175,7 @@ $nav_url = (object)[
           <li><a href="<?= $nav_url->referral ?>"><i class="bi bi-people"></i>Referral</a></li>
           <li><a href="<?= $nav_url->vip ?>"><i class="bi" style="font-style: normal; font-size: .7rem; font-weight: bold;">VIP</i>VIP</a></li>
           <li><a href="<?= $nav_url->profile ?>"><i class="bi bi-person"></i>Profile</a></li>
+          <li><a href="<?= base_url() ?>home/tes"><i class="bi bi-checj"></i>Tes Video Embed</a></li>
           <li><a href="#" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
         </ul>
         <!-- Social Info -->
