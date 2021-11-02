@@ -14,34 +14,13 @@
 </div>
 
 <!-- All Comments -->
-<div class="rating-and-review-wrapper pb-3 mt-3" style="display: none;">
+<div class="rating-and-review-wrapper pb-3 mt-3" style="display: none;" id="container_comment">
   <div class="container">
     <div class="bg-white rounded-15 shadow-sm p-3">
       <h6 class="mb-3">All comments</h6>
       <!-- Rating Review -->
       <div class="rating-review-content">
-        <ul class="ps-2">
-          <li class="single-user-review d-flex">
-            <div class="user-thumbnail mt-0"><img src="<?= base_url() ?>assets/img/custom/2.jpg" alt=""></div>
-            <div class="rating-comment">
-              <p class="comment mb-1">I strongly recommend this agency to everyone interested in running a business.
-              </p><span class="name-date">12 Dec 2021</span>
-            </div>
-          </li>
-          <li class="single-user-review d-flex">
-            <div class="user-thumbnail mt-0"><img src="<?= base_url() ?>assets/img/custom/2.jpg" alt=""></div>
-            <div class="rating-comment">
-              <p class="comment mb-1">You've saved our business! Thanks guys, keep up the good work! The best on the
-                net!</p><span class="name-date">8 Dec 2021</span>
-            </div>
-          </li>
-          <li class="single-user-review d-flex">
-            <div class="user-thumbnail mt-0"><img src="<?= base_url() ?>assets/img/custom/2.jpg" alt=""></div>
-            <div class="rating-comment">
-              <p class="comment mb-1">Absolutely wonderful! I wish I would have thought of it first. I would be lost
-                without agency.</p><span class="name-date">28 Nov 2021</span>
-            </div>
-          </li>
+        <ul class="ps-2" id="list_comment">
         </ul>
       </div>
     </div>
@@ -49,13 +28,13 @@
 </div>
 
 <!-- Comment Form -->
-<div class="ratings-submit-form pb-3" style="display: none;">
+<div class="ratings-submit-form pb-3 mt-2">
   <div class="container">
     <div class="bg-white rounded-15 shadow-sm p-3">
       <h6 class="mb-3">Submit a comment</h6>
-      <form action="#">
+      <form action="" id="fcomment">
         <div class="form-group">
-          <textarea class="form-control mb-3" name="comment" cols="30" rows="10" placeholder="Write a comment"></textarea>
+          <textarea class="form-control mb-3" name="comment" cols="30" rows="10" placeholder="Write a comment" required></textarea>
         </div>
         <button class="btn w-100 btn-indigo" type="submit">Post Comment</button>
       </form>

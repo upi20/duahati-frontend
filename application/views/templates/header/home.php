@@ -160,7 +160,7 @@ $nav_url = (object)[
         <div class="sidenav-profile bg-two">
           <div class="sidenav-style1"></div>
           <!-- User Thumbnail -->
-          <div class="user-profile"><img id="nav_foto" src="" alt=""></div>
+          <div class="user-profile"><img id="nav_foto" src="" onerror="this.src='<?= base_url() ?>assets/img/custom/pp.png'" alt=""></div>
           <!-- User Info -->
           <div class="user-info">
             <h6 class="user-name mb-0" id="nav_nama"></h6>
