@@ -19,7 +19,7 @@ class Tutorial extends Render_Controller
         // Page Settings
         $this->title = 'Tutorial Detail';
         $this->content = 'tutorial/detail';
-
+        $this->data['id_tutorial'] = $id;
         // Send data to view
         $this->render();
     }
