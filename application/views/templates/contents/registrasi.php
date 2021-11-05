@@ -8,8 +8,9 @@
     <div class="form-group mb-3">
       <input type="text" class="form-control p-2 ps-3" placeholder="Email" name="email" id="email" style="border-radius:30px; background-color: rgba(255, 255, 255, .75);">
     </div>
-    <div class="form-group mb-3">
-      <input type="text" class="form-control p-2 ps-3" placeholder="No Whatsapp" name="telepon" id="telepon" style="border-radius:30px; background-color: rgba(255, 255, 255, .75);">
+    <div class="input-group mb-3">
+      <span class="input-group-text" style="border-radius:30px 0 0 30px;">+62</span>
+      <input type="text" class="form-control" aria-label="No Whatsapp" name="telepon" id="telepon" placeholder="No Whatsapp" style="border-radius:0 30px 30px 0; background-color: rgba(255, 255, 255, .75);">
     </div>
     <div class="form-group mb-3">
       <input type="text" class="form-control p-2 ps-3" placeholder="Kode Referral" name="referral" id="referral" style="border-radius:30px; background-color: rgba(255, 255, 255, .75);">

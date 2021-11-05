@@ -3,8 +3,10 @@ $(function () {
   function page_render() {
     $.ajax({
       method: 'get',
-      url: api_base_url + 'rekening',
-      data: null
+      url: api_base_url + 'invoice/rekening',
+      data: {
+        key: api_key
+      }
     }).done((datas) => {
       const ele = $('#container-rekening');
       ele.val('');
@@ -13,6 +15,25 @@ $(function () {
         ele.append(template(e, num));
         num++;
       });
+    }).fail(($xhr) => {
+    })
+  }
+
+
+  head_render();
+  function head_render() {
+    $.ajax({
+      method: 'get',
+      url: api_base_url + 'invoice',
+      data: {
+        key: api_key
+      }
+    }).done((datas) => {
+      const data = datas.data;
+      $("#biaya_pendaftaran").html(`IDR ${format_rupiah(data.biaya_pendaftaran)}`)
+      $("#nama").html(data.nama)
+      $("#email").html(data.email)
+      $("#whatsapp").html(`<a class="fw-bold text-decoration-none" href="https://api.whatsapp.com/send?phone=${data.no_telepon}">${data.no_telepon}</a>`)
     }).fail(($xhr) => {
     })
   }
@@ -32,13 +53,49 @@ $(function () {
 });
 
 function copy_rekening(id) {
-  /* Get the text field */
   var copyText = document.getElementById(id);
-
-  /* Select the text field */
   copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-  /* Copy the text inside the text field */
+  copyText.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(copyText.value);
+}
+
+function format_rupiah(angka, format = 2, prefix) {
+  angka = angka != "" ? angka : 0;
+  angka = parseFloat(angka);
+  const minus = angka < 0 ? "-" : "";
+  angka = angka.toString().split('.');
+  let suffix = angka[1] ? '.' + angka[1] : '';
+
+  if (format) {
+    let str = '';
+    for (let i = 0; i <= format; i++) {
+      const suffix_1 = suffix[i] ? suffix[i] : '';
+      str = `${str}${suffix_1}`;
+    }
+    suffix = str;
+  }
+
+  angka = angka[0];
+  if (angka) {
+    let number_string = angka.toString().replace(/[^,\d]/g, '').toString(),
+      split = number_string.split(','),
+      sisa = split[0].length % 3,
+      rupiah = split[0].substr(0, sisa),
+      ribuan = split[0].substr(sisa).match(/\d{3}/gi)
+
+    // tambahkan titik jika yang di input sudah menjadi angka ribuan
+    if (ribuan) {
+      separator = sisa ? '.' : ''
+      rupiah += separator + ribuan.join('.')
+    }
+
+    rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah
+
+    // return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '')
+    const result = prefix == undefined ? rupiah : (rupiah ? '' + rupiah : '');
+    return minus + result + suffix;
+  }
+  else {
+    return 0
+  }
 }

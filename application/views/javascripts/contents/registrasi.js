@@ -49,7 +49,7 @@ $(document).ready(function () {
           background: "bg-primary"
         })
         setTimeout(() => {
-          window.location = `<?= base_url() ?>registrasi/invoice?token=${data.data.token}&email=${email}&nama=${nama}&telepon=${encodeURIComponent(telepon)}`;
+          window.location = `<?= base_url() ?>registrasi/invoice?token=${data.data.token}`;
         }, 500);
       },
       error: function ($xhr) {

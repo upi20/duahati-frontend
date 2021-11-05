@@ -26,24 +26,24 @@
   <div class="shadow-sm rounded-15 p-3 bg-white mb-2">
     <div class="d-flex justify-content-between align-items-center ">
       <span>Nominal Pembayaran</span>
-      <span class="text-success fw-bold">IDR. 80.000</span>
+      <span class="text-success fw-bold" id="biaya_pendaftaran"></span>
     </div>
   </div>
 
   <div class="shadow-sm rounded-15 p-3 bg-white mb-2">
     <div class="d-flex justify-content-between align-items-center ">
       <span>Nama</span>
-      <span class="fw-bold"><?= $nama ?></span>
+      <span class="fw-bold" id="nama"></span>
     </div>
 
     <div class="d-flex justify-content-between align-items-center ">
       <span>Whatsapp</span>
-      <a class="fw-bold text-decoration-none" href="https://api.whatsapp.com/send?phone=<?= $telepon ?>"><?= $telepon ?></a>
+      <div id="whatsapp"></div>
     </div>
 
     <div class="d-flex justify-content-between align-items-center ">
       <span>Email</span>
-      <span class="fw-bold"><?= $email ?></span>
+      <span class="fw-bold" id="email"></span>
     </div>
     <h6 class="p-0 m-0">Keterangan:</h6>
     <p>Pembayaran Registrasi Member Baru</p>
@@ -51,7 +51,7 @@
 
   <div class="shadow-sm rounded-15 p-3 bg-white">
     <div class="w-100 text-center">
-      <h5>Pembayaran Menggunakan:</h5>
+      <h5>Pembayaran Bisa Menggunakan:</h5>
     </div>
     <div id="container-rekening">
 
@@ -68,3 +68,7 @@
     <a class="text-decoration-none fw-bold text-primary" href="<?= base_url() ?>login">Masuk Disini</a>
   </div>
 </div>
+
+<script>
+  const api_key = '<?= isset($_GET['token']) ? $_GET['token'] : '' ?>';
+</script>
