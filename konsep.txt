@@ -1,0 +1,29 @@
+Refferal
+  Halaman ->
+    - Utama
+      - Profile
+        - nama
+        - kode referral
+        - Pengundang
+
+      - Pencairan
+        Jumlah menggunang
+        jumlah reward
+        jumlah dicarikan
+        link ke halaman pencairan
+
+      - List Mengundang
+
+    - Pencairan
+      Header
+        - menggunang
+        - dicarikan
+        - belum dicarikan
+
+      Pengajuan
+
+      List Riwayat Pencairan (tabel)
+        -no
+        - tanggal
+        - nominal
+        - status

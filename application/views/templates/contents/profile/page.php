@@ -2,16 +2,16 @@
   <div class="card user-info-card mb-2 shadow-sm rounded-15">
     <div class="card-body d-flex align-items-center">
       <div class="user-profile me-3"><img id="img-profile" src="<?= base_url() ?>assets/img/custom/2.jpg" onerror="this.src='<?= base_url() ?>assets/img/custom/2.jpg'" style="
-      margin: auto;
-              position: absolute;
-              margin: auto;
-              width: 100%;
-              max-height: 80px;
-              border-radius: 150px;
-              object-fit: cover; /* cover, contain, fill, scale-down */
-              object-position: center;
-              -webkit-border-radius: 150px;
-              -moz-border-radius: 150px;" alt=""></i>
+          margin: auto;
+          position: absolute;
+          margin: auto;
+          width: 100%;
+          max-height: 80px;
+          border-radius: 150px;
+          object-fit: cover; /* cover, contain, fill, scale-down */
+          object-position: center;
+          -webkit-border-radius: 150px;
+          -moz-border-radius: 150px;" alt=""></i>
       </div>
       <div class="user-info">
         <h5 class="mb-1" id="p_nama"></h5>
