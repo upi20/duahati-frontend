@@ -172,6 +172,71 @@ $(document).ready(function () {
   }
 
 
+  function tabel_pendapatan() {
+    const table_html = $('#tbl_pendapatan');
+    table_html.dataTable().fnDestroy()
+    const new_table = table_html.DataTable({
+      "ajax": {
+        "url": api_base_url + 'member/referral/riwayat_pendapatan',
+        "data": {
+          key: value_key
+        },
+        "type": 'POST'
+      },
+      "processing": true,
+      "serverSide": true,
+      "responsive": true,
+      "scrollX": true,
+      "lengthChange": true,
+      "autoWidth": false,
+      "columns": [
+        { "data": null },
+        { "data": "tanggal" },
+        {
+          "data": "jumlah_dana", render(data, type, full, meta) {
+            return `Rp. ${format_rupiah(data)}`;
+          }
+        },
+        {
+          "data": "jenis", render(data, type, full, meta) {
+            console.log(data);
+            return data == 1 ? `Reward mengundang ${full.nama_diundang}` : '';
+          }
+        },
+        // {
+        //   "data": "id", render(data, type, full, meta) {
+        //     return `<div class="pull-right">
+        //       <button class="btn btn-info btn-sm"
+        //                         data-id="${full.id}"
+        //                         data-kelas_id="${full.kelas_id}"
+        //                         data-status="${full.status}"
+        //                             data-toggle="modal" data-target="#tambahModal"
+        //                         onclick="Ubah(this)">
+        //                         <i class="bi bi-eye"></i>
+        //       </button>
+        //     </div > `
+        //   }, className: "nowrap"
+        // }
+      ],
+      order: [
+        [1, 'asc']
+      ],
+      columnDefs: [{
+        orderable: false,
+        targets: [0]
+      }],
+    });
+    new_table.on('draw.dt', function () {
+      var PageInfo = table_html.DataTable().page.info();
+      new_table.column(0, {
+        page: 'current'
+      }).nodes().each(function (cell, i) {
+        cell.innerHTML = i + 1 + PageInfo.start;
+      });
+    });
+  }
+
+
   $("#fcairkan").submit(function (ev) {
     ev.preventDefault();
     const data = new FormData(this);
@@ -189,6 +254,7 @@ $(document).ready(function () {
         if (data.status) {
           setToast('success', 'primary', data.message);
           $("#modal_pencairan").modal('toggle')
+          tabel_pencairan();
         } else {
           setToast('danger', 'danger', 'Failed', data.message);
         }
@@ -215,6 +281,7 @@ $(document).ready(function () {
   reward_render();
   tabel_pencairan();
   tabel_undang();
+  tabel_pendapatan();
 
 });
 
@@ -266,6 +333,7 @@ function DetailPencairan(datas) {
   $('#detail_nama_bank').html(data.nama_bank)
   $('#detail_no_rekening').html(data.no_rekening)
   $('#detail_atas_nama').html(data.atas_nama)
+  $('#detail_catatan').html(data.catatan)
   $('#detail_jumlah_dana').html(`Rp. ${format_rupiah(data.jumlah_dana)}`)
 
   let color = 'success';
@@ -275,4 +343,13 @@ function DetailPencairan(datas) {
   const status = `<span class="text-${color} font-weight-bold">${data.status_str}</span>`;
 
   $('#detail_status').html(status)
+
+  if (data.status == 1) {
+    $("#detail_bukti").attr('src', `${api_base_url}../files/bukti_pencairan/${data.foto}`)
+    $("#detail_bukti").removeAttr('style')
+    $("#detail_bukti_title").removeAttr('style')
+  } else {
+    $("#detail_bukti").attr('style', 'display:none')
+    $("#detail_bukti_title").attr('style', 'display:none')
+  }
 }

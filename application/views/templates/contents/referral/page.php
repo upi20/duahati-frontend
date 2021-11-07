@@ -48,6 +48,21 @@
   </div>
 
   <!-- riwayat pendapatan -->
+  <div class="card shadow-sm rounded-15 mb-3">
+    <div class="card-body d-flex flex-column ">
+      <h6>Riwayat Pendapatan</h6>
+      <table id="tbl_pendapatan" class="table table-striped" style="width:100%">
+        <thead>
+          <tr>
+            <th style="max-width: 30px;">No</th>
+            <th>Tanggal</th>
+            <th>Nominal</th>
+            <th>Keterangan</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
 
   <!-- undang -->
   <div class="card shadow-sm rounded-15 mb-3">
@@ -144,15 +159,25 @@
             <td id="detail_jumlah_dana"></td>
           </tr>
           <tr>
+            <td>Catatan</td>
+            <td class="px-2">:</td>
+            <td id="detail_catatan"></td>
+          </tr>
+          <tr>
             <td>Status</td>
             <td class="px-2">:</td>
             <td id="detail_status"></td>
           </tr>
+          <tr id="detail_bukti_title">
+            <td>Bukti</td>
+            <td class="px-2">:</td>
+            <td></td>
+          </tr>
         </table>
+        <img src="" id="detail_bukti" class="img-fluid" alt="">
       </div>
       <div class="modal-footer">
         <button class="btn btn-sm btn-secondary" type="button" data-bs-dismiss="modal">Batal</button>
-        <button class="btn btn-sm btn-success" form="fcairkan" type="submit">Submit</button>
       </div>
     </div>
   </div>
