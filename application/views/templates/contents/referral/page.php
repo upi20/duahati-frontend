@@ -36,7 +36,7 @@
       <table id="tbl_pencairan" class="table table-striped" style="width:100%">
         <thead>
           <tr>
-            <th>No</th>
+            <th style="max-width: 30px;">No</th>
             <th>Tanggal</th>
             <th>Nominal</th>
             <th>Status</th>
@@ -56,10 +56,10 @@
       <table id="tbl_undang" class="table table-striped" style="width:100%">
         <thead>
           <tr>
-            <th>No</th>
+            <th style="max-width: 30px;">No</th>
             <th>Nama</th>
             <th>Tanggal</th>
-            <th>Detail</th>
+            <!-- <th>Detail</th> -->
           </tr>
         </thead>
       </table>
@@ -68,7 +68,7 @@
 </div>
 
 <!-- Form Pencairan -->
-<div class="modal fade" id="modal_pencairan" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal_pencairanLabel" aria-hidden="true">
+<div class="modal fade" id="modal_pencairan" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="modal_pencairanLabel">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -83,7 +83,7 @@
           </div>
           <div class="form-group">
             <label for="no_rekening">No Rekening</label>
-            <input type="text" class="form-control" id="no_rekening" name="no_rekening" placeholder="No Rekening" required />
+            <input type="number" class="form-control" id="no_rekening" name="no_rekening" placeholder="No Rekening" required />
           </div>
           <div class="form-group">
             <label for="atas_nama">Atas Nama</label>
@@ -103,7 +103,7 @@
   </div>
 </div>
 
-<!-- Form Pencairan -->
+<!-- Form detail -->
 <div class="modal fade" id="modal_detail" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal_detailLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -115,37 +115,37 @@
         <table>
           <tr>
             <td>Tgl. Input</td>
-            <td class="ps-2">:</td>
+            <td class="px-2">:</td>
             <td id="detail_tgl_input"></td>
           </tr>
           <tr>
             <td>Tgl. Respon</td>
-            <td class="ps-2">:</td>
+            <td class="px-2">:</td>
             <td id="detail_tgl_respon"></td>
           </tr>
           <tr>
             <td>Nama Bank</td>
-            <td class="ps-2">:</td>
+            <td class="px-2">:</td>
             <td id="detail_nama_bank"></td>
           </tr>
           <tr>
             <td>No Rekening</td>
-            <td class="ps-2">:</td>
+            <td class="px-2">:</td>
             <td id="detail_no_rekening"></td>
           </tr>
           <tr>
             <td>Atas Nama</td>
-            <td class="ps-2">:</td>
+            <td class="px-2">:</td>
             <td id="detail_atas_nama"></td>
           </tr>
           <tr>
             <td>Jumlah Dana</td>
-            <td class="ps-2">:</td>
+            <td class="px-2">:</td>
             <td id="detail_jumlah_dana"></td>
           </tr>
           <tr>
             <td>Status</td>
-            <td class="ps-2">:</td>
+            <td class="px-2">:</td>
             <td id="detail_status"></td>
           </tr>
         </table>

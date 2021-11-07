@@ -80,11 +80,19 @@ $(document).ready(function () {
             return `<div class="pull-right">
               <button class="btn btn-info btn-sm"
                                 data-id="${full.id}"
-                                data-kelas_id="${full.kelas_id}"
+                                data-atas_nama="${full.atas_nama}"
+                                data-nama_bank="${full.nama_bank}"
+                                data-no_rekening="${full.no_rekening}"
+                                data-jumlah_dana="${full.jumlah_dana}"
+                                data-foto="${full.foto}"
+                                data-catatan="${full.catatan}"
+                                data-tanggal="${full.tanggal}"
+                                data-tanggal_respon="${full.tanggal_respon}"
                                 data-status="${full.status}"
+                                data-status_str="${full.status_str}"
                                 data-bs-toggle="modal"
                                 data-bs-target="#modal_detail"
-                                onclick="Ubah(this)">
+                                onclick="DetailPencairan(this)">
                                 <i class="bi bi-eye"></i>
               </button>
             </div > `
@@ -130,27 +138,27 @@ $(document).ready(function () {
         { "data": null },
         { "data": "nama" },
         { "data": "tanggal" },
-        {
-          "data": "id", render(data, type, full, meta) {
-            return `<div class="pull-right">
-              <button class="btn btn-info btn-sm"
-                                data-id="${full.id}"
-                                data-kelas_id="${full.kelas_id}"
-                                data-status="${full.status}"
-                                    data-toggle="modal" data-target="#tambahModal"
-                                onclick="Ubah(this)">
-                                <i class="bi bi-eye"></i>
-              </button>
-            </div > `
-          }, className: "nowrap"
-        }
+        // {
+        //   "data": "id", render(data, type, full, meta) {
+        //     return `<div class="pull-right">
+        //       <button class="btn btn-info btn-sm"
+        //                         data-id="${full.id}"
+        //                         data-kelas_id="${full.kelas_id}"
+        //                         data-status="${full.status}"
+        //                             data-toggle="modal" data-target="#tambahModal"
+        //                         onclick="Ubah(this)">
+        //                         <i class="bi bi-eye"></i>
+        //       </button>
+        //     </div > `
+        //   }, className: "nowrap"
+        // }
       ],
       order: [
         [1, 'asc']
       ],
       columnDefs: [{
         orderable: false,
-        targets: [0, 3]
+        targets: [0]
       }],
     });
     new_table.on('draw.dt', function () {
@@ -163,6 +171,44 @@ $(document).ready(function () {
     });
   }
 
+
+  $("#fcairkan").submit(function (ev) {
+    ev.preventDefault();
+    const data = new FormData(this);
+    data.append('key', value_key);
+    setBtnLoading('button[type=submit]', 'Submit')
+    $.ajax({
+      url: api_base_url + 'member/referral/pencairan',
+      cache: false,
+      contentType: false,
+      processData: false,
+      data: data,
+      type: 'post',
+      success: function (data) {
+        setBtnLoading('button[type=submit]', 'Submit', false);
+        if (data.status) {
+          setToast('success', 'primary', data.message);
+          $("#modal_pencairan").modal('toggle')
+        } else {
+          setToast('danger', 'danger', 'Failed', data.message);
+        }
+
+      },
+      error: function ($xhr) {
+        setBtnLoading('button[type=submit]', 'Submit', false);
+        if (!$xhr.responseText) {
+          setToast('danger', 'danger', 'Failed', "Mohon periksa koneksi anda.");
+          return;
+        }
+        const response = JSON.parse($xhr.responseText);
+        setToast('danger', 'danger', 'Failed', response.message);
+      },
+      complete: function () {
+        setBtnLoading('button[type=submit]', 'Submit', false);
+      }
+    });
+
+  })
 
   // initial page
   profile_info();
@@ -211,4 +257,22 @@ function format_rupiah(angka, format = 2, prefix) {
   else {
     return 0
   }
+}
+
+function DetailPencairan(datas) {
+  const data = datas.dataset;
+  $('#detail_tgl_input').html(data.tanggal)
+  $('#detail_tgl_respon').html(data.tanggal_respon == 'null' ? '' : data.tanggal_respon)
+  $('#detail_nama_bank').html(data.nama_bank)
+  $('#detail_no_rekening').html(data.no_rekening)
+  $('#detail_atas_nama').html(data.atas_nama)
+  $('#detail_jumlah_dana').html(`Rp. ${format_rupiah(data.jumlah_dana)}`)
+
+  let color = 'success';
+  color = data.status == 0 ? 'warning' : color;
+  color = data.status == 1 ? 'success' : color;
+  color = data.status == 2 ? 'danger' : color;
+  const status = `<span class="text-${color} font-weight-bold">${data.status_str}</span>`;
+
+  $('#detail_status').html(status)
 }
