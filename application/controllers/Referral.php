@@ -9,6 +9,7 @@ class Referral extends Render_Controller
         // Page Settings
         $this->title = 'Referral';
         $this->content = 'referral/page';
+        $this->plugins = ['datatables'];
         // Send data to view
         $this->render();
     }

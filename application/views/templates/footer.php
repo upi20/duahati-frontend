@@ -51,6 +51,14 @@
 <script src="<?= base_url() ?>assets/js/active.js"></script>
 <!-- PWA -->
 <script src="<?= base_url() ?>assets/js/pwa.js"></script>
+<!-- PAGE RELATED PLUGIN(S) -->
+<?php if (!empty($plugin_scripts)) : ?>
+  <!-- BEGIN PAGE LEVEL PLUGINS -->
+  <?php foreach ($plugin_scripts as $script) : ?>
+    <script src="<?= $script ?>" type="text/javascript"></script>
+  <?php endforeach; ?>
+  <!-- END PAGE LEVEL PLUGINS -->
+<?php endif; ?>
 
 <!-- moment js -->
 <script>
