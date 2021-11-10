@@ -9,6 +9,7 @@ class Profile extends Render_Controller
         // Page Settings
         $this->title = 'Profile';
         $this->content = 'profile/page';
+        $this->plugins = ['select2'];
         // Send data to view
         $this->render();
     }

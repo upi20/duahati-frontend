@@ -1,4 +1,87 @@
 $(function () {
+  function init_select2() {
+
+    $('#alamat_provinsi').select2({
+      ajax: {
+        method: 'post',
+        url: api_base_url + 'alamat/provinsi',
+        dataType: 'json',
+        delay: 250,
+        data: function (params) {
+          return {
+            q: params.term,
+          };
+        },
+        processResults: function (data) {
+          return {
+            results: data.results
+          };
+        }
+      }
+    });
+
+    $('#alamat_kabupaten_kota').select2({
+      ajax: {
+        method: 'post',
+        url: api_base_url + 'alamat/kabupaten_kota',
+        dataType: 'json',
+        delay: 250,
+        data: function (params) {
+          return {
+            q: params.term,
+            id_provinsi: $("#alamat_provinsi").val()
+          };
+        },
+        processResults: function (data) {
+          return {
+            results: data.results
+          };
+        }
+      }
+    });
+
+    $('#alamat_kecamatan').select2({
+      ajax: {
+        method: 'post',
+        url: api_base_url + 'alamat/kecamatan',
+        dataType: 'json',
+        delay: 250,
+        data: function (params) {
+          return {
+            q: params.term,
+            id_kabupaten_kota: $("#alamat_kabupaten_kota").val()
+          };
+        },
+        processResults: function (data) {
+          return {
+            results: data.results
+          };
+        }
+      }
+    });
+
+    $('#alamat_desa_kelurahan').select2({
+      ajax: {
+        method: 'post',
+        url: api_base_url + 'alamat/desa_kelurahan',
+        dataType: 'json',
+        delay: 250,
+        data: function (params) {
+          return {
+            q: params.term,
+            id_kecamatan: $("#alamat_kecamatan").val()
+          };
+        },
+        processResults: function (data) {
+          return {
+            results: data.results
+          };
+        }
+      }
+    });
+  }
+
+
   setTimeout(() => {
     $("#password").val('');
   }, 500)
@@ -23,6 +106,46 @@ $(function () {
       localStorage.setItem('email', data.email);
       localStorage.setItem('nama', data.nama);
       $("#img-profile").attr('src', `${api_base_url}../files/member/${data.foto}`);
+
+      // revisi v2
+      // nama panggilan
+      $("#nama_panggilan").val(data.nama_panggilan);
+
+      // jenis kelamin
+      $("#jenis_kelamin").val(data.jenis_kelamin);
+
+      // status
+      $("#status").val(data.menikah);
+
+      // status
+      $("#tanggal_lahir").val(data.tanggal_lahir);
+
+      // alamat lainnya
+      $("#detail_lainnya").val(data.detail_lainnya);
+
+      // alamat
+      template_alamat($('#alamat_provinsi'), {
+        id: data.id_provinsi,
+        text: data.nama_provinsi
+      });
+
+      template_alamat($('#alamat_kabupaten_kota'), {
+        id: data.id_kabupaten_kota,
+        text: data.nama_kabupaten_kota
+      });
+
+      template_alamat($('#alamat_kecamatan'), {
+        id: data.id_kecamatan,
+        text: data.nama_kecamatan
+      });
+
+      template_alamat($('#alamat_desa_kelurahan'), {
+        id: data.id_desa_kelurahan,
+        text: data.nama_desa_kelurahan
+      });
+
+      init_select2();
+
     }).fail(($xhr) => {
 
     })
@@ -81,4 +204,10 @@ $(function () {
     });
 
   })
+
+  function template_alamat(ele, data) {
+    if (data.id != null) {
+      $(ele).append(`<option selected value="${data.id}">${data.text}</option>`);
+    }
+  }
 });

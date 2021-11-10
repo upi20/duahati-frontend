@@ -39,11 +39,10 @@ $config['icheck'] = [
 
 $config['select2'] = [
 	'styles' => [
-		'assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css',
-		'assets/plugins/select2/css/select2.min.css'
+		'assets/plugins/select2/style.css',
 	],
 	'scripts' => [
-		'assets/plugins/select2/js/select2.full.min.js',
+		'assets/plugins/select2/script.js',
 	]
 ];
 
