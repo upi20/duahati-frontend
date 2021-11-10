@@ -20,7 +20,7 @@
       <input type="text" class="form-control p-2 ps-3" readonly placeholder="No Whatsapp" value="" name="telepon" id="telepon" style="border-radius:30px; background-color: rgba(255, 255, 255, .75);">
     </div>
 
-    <div class="form-group mb-3">
+    <!-- <div class="form-group mb-3">
       <input type="text" class="form-control p-2 ps-3" placeholder="Atas Nama" name="atas_nama" value="" id="atas_nama" style="border-radius:30px; background-color: rgba(255, 255, 255, .75);" required>
     </div>
     <div class="form-group mb-3">
@@ -28,12 +28,14 @@
     </div>
     <div class="form-group mb-3">
       <input type="number" class="form-control p-2 ps-3" placeholder="Nomor Rekening" name="no_rekening" value="" id="no_rekening" style="border-radius:30px; background-color: rgba(255, 255, 255, .75);" required>
-    </div>
+    </div> -->
+
+
     <div class="form-group mb-3">
       <input type="number" class="form-control p-2 ps-3" placeholder="Nominal" name="nominal" value="" id="nominal" style="border-radius:30px; background-color: rgba(255, 255, 255, .75);" required>
     </div>
     <div class="form-group mb-3">
-      <input type="date" class="form-control p-2 ps-3" placeholder="Tanggal" name="tanggal" value="" id="tanggal" style="border-radius:30px; background-color: rgba(255, 255, 255, .75);" required>
+      <input type="date" class="form-control p-2 ps-3" placeholder="Tanggal" name="tanggal" value="<?= Date('Y-m-d') ?>" id="tanggal" style="border-radius:30px; background-color: rgba(255, 255, 255, .75);" required>
     </div>
 
     <div class="form-group mb-3">

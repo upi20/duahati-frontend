@@ -13,7 +13,7 @@
       <input type="text" class="form-control" aria-label="No Whatsapp" name="telepon" id="telepon" placeholder="No Whatsapp" style="border-radius:0 30px 30px 0; background-color: rgba(255, 255, 255, .75);">
     </div>
     <div class="form-group mb-3">
-      <input type="text" class="form-control p-2 ps-3" placeholder="Kode Referral" name="referral" id="referral" style="border-radius:30px; background-color: rgba(255, 255, 255, .75);">
+      <input type="text" class="form-control p-2 ps-3" placeholder="Kode Referral (Boleh Kosong)" name="referral" id="referral" style="border-radius:30px; background-color: rgba(255, 255, 255, .75);">
     </div>
     <div class="form-group mb-3">
       <input type="password" class="form-control p-2 ps-3" placeholder="Password" name="password" id="password" style="border-radius:30px; background-color: rgba(255, 255, 255, .75);">

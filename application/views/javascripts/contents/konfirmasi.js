@@ -19,6 +19,7 @@ $(function () {
       $("#nama").val(data.nama)
       $("#email").val(data.email)
       $("#telepon").val(data.no_telepon)
+      $("#nominal").val(data.biaya_pendaftaran)
     }).fail(($xhr) => {
     })
   }

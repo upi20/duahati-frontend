@@ -50,12 +50,10 @@
   </div>
 
   <div class="shadow-sm rounded-15 p-3 bg-white">
-    <div class="w-100 text-center">
+    <div class="w-100r pb-2">
       <h5>Pembayaran Bisa Menggunakan:</h5>
     </div>
-    <div id="container-rekening">
-
-    </div>
+    <div id="container-rekening"></div>
 
   </div>
   <div class="form-group my-2 text-center">

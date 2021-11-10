@@ -24,6 +24,7 @@ $(document).ready(function () {
   }
 
   function reward_render() {
+    setBtnLoading('#reward_refresh', '');
     $.ajax({
       method: 'get',
       url: api_base_url + 'member/referral/reward',
@@ -35,8 +36,10 @@ $(document).ready(function () {
       $("#pencairan_total").html(`Total Pendapatan:  <span class="fw-bold">Rp. ${format_rupiah(data.total_pendapatan)}</span>`);
       $("#pencairan_dicairkan").html(`Sudah Dicairkan:  <span class="fw-bold">Rp. ${format_rupiah(data.dicairkan)}</span>`);
       $("#pencairan_belum_dicairkan").html(`Belum Dicairkan:  <span class="fw-bold">Rp. ${format_rupiah(data.belum_dicairkan)}</span>`);
+      $("#max").html(`Max Rp. ${format_rupiah(data.belum_dicairkan)}`);
+      setBtnLoading('#reward_refresh', '<i class="bi bi-arrow-repeat"></i>', false);
     }).fail(($xhr) => {
-
+      setBtnLoading('#reward_refresh', '<i class="bi bi-arrow-repeat"></i>', false);
     })
   }
 
@@ -274,6 +277,22 @@ $(document).ready(function () {
       }
     });
 
+  })
+
+  $("#pencairan_refresh").click(() => {
+    tabel_pencairan();
+  })
+
+  $("#pendapatan_refresh").click(() => {
+    tabel_pendapatan();
+  })
+
+  $("#mengundang_refresh").click(() => {
+    tabel_undang();
+  })
+
+  $("#reward_refresh").click(() => {
+    reward_render();
   })
 
   // initial page

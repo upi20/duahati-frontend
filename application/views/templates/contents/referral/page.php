@@ -19,7 +19,10 @@
   <!-- reward -->
   <div class="card shadow-sm rounded-15 mb-3">
     <div class="card-body d-flex flex-column ">
-      <h6>Reward</h6>
+      <div class="d-flex justify-content-between align-items-center">
+        <h6>Reward</h6>
+        <button class="btn btn-indigo btn-sm" title="Refresh" aria-label="Refresh" id="reward_refresh"><i class="bi bi-arrow-repeat"></i></button>
+      </div>
       <span id="pencairan_total"></span>
       <span id="pencairan_dicairkan"></span>
       <span id="pencairan_belum_dicairkan"></span>
@@ -32,7 +35,10 @@
   <!-- riwayat pencairan -->
   <div class="card shadow-sm rounded-15 mb-3">
     <div class="card-body d-flex flex-column ">
-      <h6>Riwayat Pencairan</h6>
+      <div class="d-flex justify-content-between align-items-center">
+        <h6>Riwayat Pencairan</h6>
+        <button class="btn btn-indigo btn-sm" title="Refresh" aria-label="Refresh" id="pencairan_refresh"><i class="bi bi-arrow-repeat"></i></button>
+      </div>
       <table id="tbl_pencairan" class="table table-striped" style="width:100%">
         <thead>
           <tr>
@@ -50,7 +56,10 @@
   <!-- riwayat pendapatan -->
   <div class="card shadow-sm rounded-15 mb-3">
     <div class="card-body d-flex flex-column ">
-      <h6>Riwayat Pendapatan</h6>
+      <div class="d-flex justify-content-between align-items-center">
+        <h6>Riwayat Pendapatan</h6>
+        <button class="btn btn-indigo btn-sm" title="Refresh" aria-label="Refresh" id="pendapatan_refresh"><i class="bi bi-arrow-repeat"></i></button>
+      </div>
       <table id="tbl_pendapatan" class="table table-striped" style="width:100%">
         <thead>
           <tr>
@@ -67,7 +76,10 @@
   <!-- undang -->
   <div class="card shadow-sm rounded-15 mb-3">
     <div class="card-body d-flex flex-column ">
-      <h6>Mengundang</h6>
+      <div class="d-flex justify-content-between align-items-center">
+        <h6>Mengundang</h6>
+        <button class="btn btn-indigo btn-sm" title="Refresh" aria-label="Refresh" id="mengundang_refresh"><i class="bi bi-arrow-repeat"></i></button>
+      </div>
       <table id="tbl_undang" class="table table-striped" style="width:100%">
         <thead>
           <tr>
@@ -105,13 +117,13 @@
             <input type="text" class="form-control" id="atas_nama" name="atas_nama" placeholder="Atas Nama" required />
           </div>
           <div class="form-group">
-            <label for="jumlah_dana">Jumlah Dana</label>
+            <label for="jumlah_dana">Jumlah Dana <span id="max" class="fw-bold"></span></label>
             <input type="number" class="form-control" id="jumlah_dana" name="jumlah_dana" placeholder="Jumlah Dana" min="1" required />
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-sm btn-secondary" type="button" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-sm btn-secondary" type="button" data-bs-dismiss="modal">Tutup</button>
         <button class="btn btn-sm btn-success" form="fcairkan" type="submit">Submit</button>
       </div>
     </div>
@@ -177,7 +189,7 @@
         <img src="" id="detail_bukti" class="img-fluid" alt="">
       </div>
       <div class="modal-footer">
-        <button class="btn btn-sm btn-secondary" type="button" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-sm btn-secondary" type="button" data-bs-dismiss="modal">Tutup</button>
       </div>
     </div>
   </div>

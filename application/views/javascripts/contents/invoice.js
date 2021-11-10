@@ -40,14 +40,24 @@ $(function () {
 
   function template(data, num) {
     return `
-    <h6 class="my-0 py-0">${data.nama_bank}</h6>
-    <span>Nomor Rekening:</span>
-    <div class="d-flex justify-content-between align-items-center">
-      <input type="text" value="${data.no_rekening}" id="rek_${num}" class="no_rek" readonly>
-      <a href="#" class="text-decoration-none" onclick="copy_rekening('rek_${num}')">Salin</a>
-    </div>
-    <span>Atas Nama:</span>
-    <p class="fw-bold">${data.atas_nama}</p>
+      <div class="d-flex align-items-center my-2 mb-3">
+        <div class="me-3">
+          <img src="${api_base_url}../files/icon_bank/${data.icon}" style="width: 55px;" alt="">
+        </div>
+        <div style="flex:1">
+          <input type="text" value="${data.no_rekening}" id="rek_${num}" style="position:fixed; top:-50px" class="no_rek" readonly="">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <span class="no_rek">${data.no_rekening}</span>
+            </div>
+            <a href="#" class="text-decoration-none" onclick="copy_rekening('rek_${num}')">Salin</a>
+          </div>
+          <span>
+            a/n
+            <span class="fw-bold">${data.atas_nama}</span>
+          </span>
+        </div>
+      </div>
     `;
   }
 });
