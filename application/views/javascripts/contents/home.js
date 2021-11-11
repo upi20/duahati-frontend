@@ -77,7 +77,7 @@ $(function () {
   function template(data) {
     return `
     < div >
-    <div class="single-hero-slide bg-overlay" style="background-image: url('${api_base_url}../files/home/slider/${data.foto}')">
+    <div class="single-hero-slide" style="background-image: url('${api_base_url}../files/home/slider/${data.foto}')">
       <div class="h-100 d-flex align-items-center text-center">
         <div class="container">
           <h6 class="text-white mb-1 fw-bold">${data.nama}</h6>

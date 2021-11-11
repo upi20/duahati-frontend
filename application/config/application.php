@@ -54,4 +54,4 @@ $config['page_nav'] = 'main-header navbar navbar-expand navbar-white navbar-ligh
 $config['minify'] = false;
 
 $config['api_base_url'] = 'https://duahati-backend.komunitashalal.com/api/';
-// $config['api_base_url'] = 'http://192.168.43.9/aplikasi/offline/duahati-admin/api/';
+$config['api_base_url'] = 'http://192.168.43.9/aplikasi/offline/duahati-admin/api/';
