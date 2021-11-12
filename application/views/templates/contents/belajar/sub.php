@@ -1,5 +1,5 @@
 <div class="container">
-  <a href="" class="" id="link-back" type="submit"><i class="bi bi-chevron-left"></i> Kembali Ke List Kelas</a>
+  <a href="" class="" id="link-back" type="submit"><i class="bi bi-chevron-left"></i> Kembali Ke List Materi</a>
 </div>
 <div class="container mt-2">
   <!-- Kelas Information-->
@@ -22,7 +22,7 @@
       </div>
       <div class="user-info">
         <div class="d-flex align-items-center">
-          <h5 class="mb-1 kelas_nama"></h5><span class="badge bg-warning ms-2 rounded-pill" id="kelas_kategori"></span>
+          <h6 class="mb-1 kelas_nama"></h6><span class="badge bg-warning ms-2 rounded-pill" id="kelas_kategori"></span>
         </div>
         <div class="skill-data">
           <!-- Skill Name -->
@@ -61,5 +61,5 @@
 </div>
 
 <script>
-  const global_kelas_id = '<?= $kelas_id ?>';
+  const global_materi_id = '<?= $materi_id ?>';
 </script>

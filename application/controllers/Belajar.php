@@ -32,10 +32,37 @@ class Belajar extends Render_Controller
         $this->content = 'belajar/detail';
         $this->data['materi_id'] = $id;
         $this->data['kelas_id'] = $kelas_id;
+        $this->data['submateri'] = 0;
+        // Send data to view
+        $this->render();
+    }
+
+    // submateri
+    public function detail_sub($materi_id = null, $kelas_id = null)
+    {
+        // Page Settings
+        $this->title = 'Belajar';
+        $this->content = 'belajar/sub';
+        $this->data['materi_id'] = $materi_id;
 
         // Send data to view
         $this->render();
     }
+
+    public function detail_materi_sub($materi_sub_id = null, $materi_id = null)
+    {
+        // Page Settings
+        $this->title = 'Belajar';
+        $this->content = 'belajar/detail';
+        $this->data['materi_id'] = $materi_id;
+        $this->data['materi_sub_id'] = $materi_sub_id;
+        $this->data['submateri'] = 1;
+
+        // Send data to view
+        $this->render();
+    }
+
+
 
     function __construct()
     {

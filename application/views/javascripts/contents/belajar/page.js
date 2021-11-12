@@ -1,6 +1,4 @@
 $(function () {
-  // moment.defineLocale('id', {});
-  // base url api
 
   page_render();
   function page_render() {

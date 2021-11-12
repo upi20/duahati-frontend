@@ -17,26 +17,48 @@ $(function () {
 
   materi_render();
   function materi_render() {
-    $.ajax({
-      method: 'get',
-      url: api_base_url + 'member/kelas/get_materi',
-      data: {
+    let url = api_base_url;
+    let data = {};
+
+
+    if (global_submateri == 0) {
+      url = api_base_url + 'member/kelas/get_materi';
+      data = {
         key: value_key,
         materi_id: global_materi_id
-      }
+      };
+    } else if (global_submateri == 1) {
+      url = api_base_url + 'member/kelas/get_materi_sub_detail';
+      data = {
+        key: value_key,
+        materi_sub_id: global_materi_sub_id
+      };
+    }
+
+    $.ajax({
+      method: 'get',
+      url: url,
+      data: data
     }).done((datas) => {
+      console.log(datas);
       const materi = datas.data.materi;
       const tonton = datas.data.tonton;
       $("#materi_id").val(materi.id);
+      $("#finish").val(datas.data.finish);
+      $("#materi_sub_id").val(materi.materi_sub_id);
       $("#kelas_id").val(materi.kelas_id);
       $("#materi_nama").text(materi.nama);
       $("#materi_deskripsi").text(materi.keterangan);
       $("#materi_player").html(youtube_embed_html_generate(materi.url));
+
+
+
+      // pengkondisian
       $("#sebelumnya").html(materi.sebelumnya != null ? `
-      <a href="<?= base_url()?>belajar/detail/${materi.sebelumnya}" class="btn btn-secondary"><i class="bi bi-chevron-left"></i> Sebelumnya</a>
+      <a href="<?= base_url()?>belajar/${global_submateri == 1 ? 'detail_materi_sub/' : 'detail'}${materi.sebelumnya_submateri == 1 ? '_sub' : ''}/${materi.sebelumnya}/${global_submateri == 1 ? materi.id : materi.kelas_id}" class="btn btn-secondary"><i class="bi bi-chevron-left"></i> Sebelumnya</a>
       `: '')
       $("#selanjutnya").html(materi.selanjutnya != null ? `
-      <a href="<?= base_url()?>belajar/detail/${materi.selanjutnya}" id="btn_selanjutnya" class="btn btn-info">Berikutanya <i class="bi bi-chevron-right"></i></a>
+      <a href="<?= base_url()?>belajar/${global_submateri == 1 ? 'detail_materi_sub/' : 'detail'}${materi.selanjutnya_submateri == 1 ? '_sub' : ''}/${materi.selanjutnya}/${global_submateri == 1 ? materi.id : materi.kelas_id}" id="btn_selanjutnya" class="btn btn-info">Berikutanya <i class="bi bi-chevron-right"></i></a>
       `: '')
 
       $("#btn_selanjutnya").click(function (e) {
@@ -78,7 +100,7 @@ $(function () {
       let persentase = Number(data.selesai) * (100 / Number(data.total));
       persentase = Math.floor(persentase);
       persentase = isNaN(persentase) ? 0 : persentase;
-      console.log( isNaN(persentase) );
+      console.log(isNaN(persentase));
       $("#kelas_counter_nilai").text(persentase);
       const progres = $('#kelas_counter_bar');
       progres.attr('style', `width: ${persentase}%`)
@@ -166,7 +188,7 @@ $(function () {
     const data = new FormData(this);
     data.append('key', value_key);
     $.ajax({
-      url: api_base_url + 'member/kelas/feedback',
+      url: `${api_base_url}member/kelas/feedback${global_submateri == 1 ? '_sub' : ''}`,
       cache: false,
       contentType: false,
       processData: false,

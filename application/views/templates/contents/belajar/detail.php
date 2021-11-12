@@ -1,5 +1,9 @@
 <div class="container">
-  <a href="<?= base_url() ?>belajar/kelas/<?= $kelas_id ?>" class="" type="submit"><i class="bi bi-chevron-left"></i> Kembali Ke Kelas</a>
+  <?php if ($submateri == 0) : ?>
+    <a href="<?= base_url() ?>belajar/kelas/<?= $kelas_id ?>" class="" type="submit"><i class="bi bi-chevron-left"></i> Kembali Ke List Materi</a>
+  <?php elseif ($submateri == 1) : ?>
+    <a href="<?= base_url() ?>belajar/detail_sub/<?= $materi_id ?>" class="" type="submit"><i class="bi bi-chevron-left"></i> Kembali Ke List Materi</a>
+  <?php endif ?>
 </div>
 <div class="container mt-2">
   <!-- Element Heading -->
@@ -28,6 +32,8 @@
       <form action="" id="ffeedback">
         <input type="hidden" id="materi_id" name="materi_id">
         <input type="hidden" id="kelas_id" name="kelas_id">
+        <input type="hidden" id="finish" name="finish">
+        <input type="hidden" id="materi_sub_id" name="materi_sub_id">
         <input type="hidden" id="tonton_id" name="tonton_id" value="0">
         <div class="rating-card-three text-left mb-2">
           <div class="stars justify-content-end">
@@ -130,4 +136,6 @@
 
 <script>
   const global_materi_id = '<?= $materi_id ?>';
+  const global_submateri = '<?= $submateri ?>';
+  const global_materi_sub_id = '<?= @$materi_sub_id ?>';
 </script>

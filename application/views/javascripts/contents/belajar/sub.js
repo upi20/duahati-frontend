@@ -4,16 +4,18 @@ $(function () {
   function head_render() {
     $.ajax({
       method: 'get',
-      url: api_base_url + 'member/kelas/kelas_head',
+      url: api_base_url + 'member/kelas/kelas_head_sub',
       data: {
         key: value_key,
-        kelas_id: global_kelas_id
+        materi_id: global_materi_id
       },
       success: (datas) => {
+        console.log(datas);
         const data = datas.data;
         const kelas = datas.data.kelas;
         const mentor = datas.data.mentor;
-        $("#kelas_foto").attr('src', `${api_base_url}../files/kelas/master/${kelas.foto}`);
+
+        $("#kelas_foto").attr('src', `http://img.youtube.com/vi/${youtube_parser(kelas.foto)}/mqdefault.jpg`);
         $(".kelas_nama").text(kelas.nama);
         $("#kelas_kategori").text(kelas.kategori_nama);
         // $("#kelas_counter_nilai").text(data.total);
@@ -25,10 +27,11 @@ $(function () {
         progres.attr('style', `width: ${persentase}%`)
         progres.attr('aria-valuenow', `width: ${persentase}%`)
 
+
         $("#kelas_keterangan").text(kelas.keterangan);
         // $("#kelas_expire").text('10 Desember 2021 (20 Hari Lagi)');
         $('#mentor_no_whatsapp').attr('href', `https://api.whatsapp.com/send?phone=${mentor.no_whatsapp}`);
-        $("#link-back").attr('href', `<?= base_url()?>${kelas.tipe == 2 ? 'vip' : 'belajar'}`)
+        $("#link-back").attr('href', `<?= base_url()?>belajar/kelas/${kelas.kelas_id}`)
       },
       error: ($xhr) => {
         console.log($xhr);
@@ -41,10 +44,10 @@ $(function () {
     const ele = $('#container');
     $.ajax({
       method: 'get',
-      url: api_base_url + 'member/kelas/kelas_body_list',
+      url: api_base_url + 'member/kelas/get_materi_sub',
       data: {
         key: value_key,
-        kelas_id: global_kelas_id
+        materi_id: global_materi_id
       }
     }).done((datas) => {
       ele.val('');
@@ -66,13 +69,10 @@ $(function () {
       selesai = '<i class="text-success">Selesai</i>';
     }
 
-    let ok = `href="<?= base_url() ?>belajar/detail/${data.id}/${data.kelas_id}"`;
+    let ok = `href="<?= base_url() ?>belajar/detail_materi_sub/${data.id}/${global_materi_id}"`;
 
-    if (data.submateri == 1) {
-      ok = `href="<?= base_url() ?>belajar/detail_sub/${data.id}/${data.kelas_id}"`;
-    }
     let link = ok;
-    if (current == 0) {
+    if (current != 1) {
       ok = `class="btn btn-secondary"`
       link = '';
     } else {
